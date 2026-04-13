@@ -14,7 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script src="config.js"></script>
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -29,7 +30,7 @@
   <div id="nav-menu" class="nav-menu">
     <a href="/">Home</a>
     <a href="sponsors">Sponsors</a>
-    <a href="https://lu.ma/justbuild" class="nav-btn" target="_blank">Register</a>
+    <a data-link="register" class="nav-btn" target="_blank">Register</a>
     <a href="mailto:hello@justbuild.ing">Contact</a>
   </div>
 
@@ -48,14 +49,14 @@
     <div class="container">
       <div class="flanked-content">
         <div class="event-photo">
-          <img src="assets/event.webp" alt="JustBuild community at a hackathon">
+          <img src="assets/event.webp" alt="JustBuild community at a hackathon" loading="lazy">
         </div>
         <div class="flanked-text">
           <p class="text-large">Put your brand in front of hundreds of builders, designers, engineers, students, and business owners across two days. Help fuel Utah's next wave of AI innovation.</p>
           <p>JustBuild is Utah's premier AI community on a mission to make Utah AI-native. When you sponsor AI Builder Day, you're partnering with a team that has a proven track record of delivering high-energy events trusted by some of the biggest names in tech.</p>
         </div>
         <div class="event-photo">
-          <img src="assets/event2.jpg" alt="JustBuild hackathon group photo">
+          <img src="assets/event2.jpg" alt="JustBuild hackathon group photo" loading="lazy">
         </div>
       </div>
     </div>
@@ -74,15 +75,15 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat">
-          <span class="stat-number">400+</span>
+          <span class="stat-number" data-stat="builders">400+</span>
           <span class="stat-label">Builders in our community</span>
         </div>
         <div class="stat">
-          <span class="stat-number">16+</span>
+          <span class="stat-number" data-stat="sponsors">16+</span>
           <span class="stat-label">Sponsors who trust us</span>
         </div>
         <div class="stat">
-          <span class="stat-number">$50K+</span>
+          <span class="stat-number" data-stat="prizes">$50K+</span>
           <span class="stat-label">In prizes awarded</span>
         </div>
       </div>
@@ -297,11 +298,11 @@
           <p class="footer-tagline">Make Utah AI-Native</p>
         </div>
         <div class="footer-links">
-          <a href="https://justbuild.ing" target="_blank">justbuild.ing</a>
-          <a href="https://aibuilderday.com" target="_blank">aibuilderday.com</a>
-          <a href="https://tinyurl.com/jb-slackinvite" target="_blank">Slack</a>
-          <a href="https://x.com/justbuildHQ" target="_blank">X</a>
-          <a href="https://www.linkedin.com/company/justbuild" target="_blank">LinkedIn</a>
+          <a data-link="justbuild" target="_blank">justbuild.ing</a>
+          <a data-link="aibuilderday" target="_blank">aibuilderday.com</a>
+          <a data-link="slack" target="_blank">Slack</a>
+          <a data-link="twitter" target="_blank">X</a>
+          <a data-link="linkedin" target="_blank">LinkedIn</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -311,6 +312,5 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>

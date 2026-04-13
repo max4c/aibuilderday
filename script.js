@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   renderSponsors();
   renderTierPrices();
+  renderStats();
+  renderLinks();
 });
-
-/* --- Countdown Timer --- */
 
 function initCountdown() {
   var el = document.getElementById('countdown');
@@ -16,7 +16,6 @@ function initCountdown() {
 
   function pad(n) { return String(n).padStart(2, '0'); }
 
-  // Build DOM once
   el.innerHTML =
     group('days', 'Days') + sep() +
     group('hours', 'Hours') + sep() +
@@ -76,8 +75,6 @@ function initCountdown() {
   setInterval(update, 1000);
 }
 
-/* --- Mobile Nav --- */
-
 function initMobileNav() {
   const toggle = document.getElementById('nav-toggle');
   const menu = document.getElementById('nav-menu');
@@ -98,8 +95,6 @@ function initMobileNav() {
   });
 }
 
-/* --- Nav Scroll (transparent hero nav) --- */
-
 function initNavScroll() {
   const nav = document.querySelector('.navbar-transparent');
   if (!nav) return;
@@ -111,16 +106,12 @@ function initNavScroll() {
   window.addEventListener('scroll', check, { passive: true });
 }
 
-/* --- Partnership Badge --- */
-
 function initPartnershipBadge() {
   if (CONFIG.showPartnershipBadge) return;
   document.querySelectorAll('.partnership-badge').forEach(el => {
     el.style.display = 'none';
   });
 }
-
-/* --- Scroll Reveal --- */
 
 function initReveal() {
   const observer = new IntersectionObserver((entries) => {
@@ -135,8 +126,6 @@ function initReveal() {
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
-/* --- Sponsor Grid --- */
-
 function renderSponsors() {
   document.querySelectorAll('.sponsor-grid').forEach(grid => {
     grid.innerHTML = CONFIG.sponsors.map(s =>
@@ -149,13 +138,25 @@ function renderSponsors() {
   });
 }
 
-/* --- Tier Prices --- */
-
 function renderTierPrices() {
   document.querySelectorAll('[data-tier-price]').forEach(el => {
     const key = el.getAttribute('data-tier-price');
     if (CONFIG.tiers[key]) {
       el.textContent = '$' + CONFIG.tiers[key].price.toLocaleString();
     }
+  });
+}
+
+function renderStats() {
+  document.querySelectorAll('[data-stat]').forEach(el => {
+    const key = el.getAttribute('data-stat');
+    if (CONFIG.stats[key]) el.textContent = CONFIG.stats[key];
+  });
+}
+
+function renderLinks() {
+  document.querySelectorAll('[data-link]').forEach(el => {
+    const key = el.getAttribute('data-link');
+    if (CONFIG.links[key]) el.setAttribute('href', CONFIG.links[key]);
   });
 }
