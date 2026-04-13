@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Builder Day — Utah's Biggest AI Event | May 8–9, 2026</title>
+  <meta name="description" content="Two days of learning, building, and launching. AI Builder Day brings together engineers, students, business owners, and first-timers for Utah's biggest AI event.">
+  <meta property="og:title" content="AI Builder Day — May 8–9, 2026 · Draper, UT">
+  <meta property="og:description" content="Two days of learning, building, and launching. Utah's biggest AI event.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://aibuilderday.com/assets/og.png">
+  <meta property="og:url" content="https://aibuilderday.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-transparent">
+    <a href="/" class="nav-wordmark">JustBuild</a>
+    <span class="nav-center">May 8, 2026 · Draper UT</span>
+    <button id="nav-toggle" class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div id="nav-menu" class="nav-menu">
+    <a href="/">Home</a>
+    <a href="sponsors">Sponsors</a>
+    <a href="https://lu.ma/justbuild" class="nav-btn" target="_blank">Register</a>
+    <a href="mailto:hello@justbuild.ing">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div id="countdown" class="countdown"></div>
+      <h1 class="hero-title">AI BUILDER DAY</h1>
+    </div>
+    <div class="hero-bottom">
+      <span class="hero-tagline">UTAH'S <em>BIGGEST</em> AI EVENT</span>
+      <div class="hero-actions">
+        <a href="sponsors" class="btn btn-outline">Sponsor</a>
+        <a href="https://lu.ma/justbuild" class="btn btn-primary" target="_blank">Register</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnership Badge -->
+  <div class="partnership-badge">
+    <span>In partnership with the Utah Governor's Office of Economic Opportunity</span>
+  </div>
+
+  <!-- What is AI Builder Day? -->
+  <section class="section reveal">
+    <div class="container">
+      <div class="flanked-content">
+        <div class="event-photo">
+          <img src="assets/event.webp" alt="JustBuild community at a hackathon">
+        </div>
+        <div class="flanked-text">
+          <h2>What is AI Builder Day?</h2>
+          <p class="lead">Two days of learning, building, and launching. AI Builder Day brings together engineers, students, business owners, and first-timers for Utah's biggest AI event.</p>
+          <p class="credit">Produced by JustBuild in partnership with the Utah Governor's Office of Economic Opportunity.</p>
+        </div>
+        <div class="event-photo">
+          <img src="assets/event2.jpg" alt="JustBuild hackathon group photo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section class="section section-alt reveal" id="schedule">
+    <div class="container">
+      <h2 class="section-heading">Schedule</h2>
+      <p class="section-subheading">Two days. One mission: build.</p>
+
+      <div class="schedule-grid">
+        <div class="schedule-day">
+          <div class="schedule-day-header">
+            <span class="schedule-day-label">Day 1 · Learn</span>
+            <h3>Friday, May 8</h3>
+          </div>
+          <div class="schedule-items">
+            <div class="schedule-item">
+              <span class="schedule-time">9:00 AM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Doors Open</div>
+                <div class="schedule-desc">Check-in, coffee &amp; breakfast</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">10:00 AM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Opening Keynote</div>
+                <div class="schedule-desc">Welcome &amp; state of AI in Utah</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">11:00 AM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">AI for Beginners</div>
+                <div class="schedule-desc">Your first time using AI tools</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">12:30 PM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Lunch &amp; Sponsor Expo</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">1:30 PM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Workshop Tracks</div>
+                <div class="schedule-desc">Beginner · Intermediate · Advanced</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">4:00 PM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Sponsor Demos</div>
+                <div class="schedule-desc">Tools &amp; products reshaping how we build</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">5:30 PM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Networking Reception</div>
+                <div class="schedule-desc">Meet builders, mentors &amp; recruiters</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-day schedule-day-featured">
+          <div class="schedule-day-header">
+            <span class="schedule-day-label">Day 2 · Build</span>
+            <h3>Saturday, May 9</h3>
+            <span class="schedule-day-badge">$25K+ in bounties</span>
+          </div>
+          <div class="schedule-items">
+            <div class="schedule-item">
+              <span class="schedule-time">9:00 AM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Breakfast &amp; Team Formation</div>
+                <div class="schedule-desc">Find teammates, pick a bounty</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">10:00 AM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Hackathon Kickoff</div>
+                <div class="schedule-desc">Bounty announcements &amp; rules</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">11:00 AM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Build Session Begins</div>
+                <div class="schedule-desc">Mentors on-site all day</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">12:30 PM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Lunch (keep building)</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">2:00 PM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Mentor Office Hours</div>
+                <div class="schedule-desc">Unblock your team</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">5:00 PM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Code Freeze</div>
+                <div class="schedule-desc">Prep your demo</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">5:30 PM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Project Demos &amp; Judging</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">7:00 PM</span>
+              <div class="schedule-content">
+                <div class="schedule-title">Awards Ceremony</div>
+                <div class="schedule-desc">Celebrate, recruit, repeat</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speakers -->
+  <section class="section reveal" id="speakers">
+    <div class="container">
+      <h2 class="section-heading">Confirmed Speakers</h2>
+      <p class="section-subheading">World-class lineup. More announced soon.</p>
+      <div class="speakers-grid">
+        <div class="speaker-card">
+          <div class="speaker-photo"><div class="speaker-photo-placeholder">Photo</div></div>
+          <div class="speaker-name">Speaker TBA</div>
+          <div class="speaker-title">Founder · Leading AI Lab</div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><div class="speaker-photo-placeholder">Photo</div></div>
+          <div class="speaker-name">Speaker TBA</div>
+          <div class="speaker-title">Engineering Lead · Frontier Model Co.</div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><div class="speaker-photo-placeholder">Photo</div></div>
+          <div class="speaker-name">Speaker TBA</div>
+          <div class="speaker-title">Product · AI Tooling Startup</div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><div class="speaker-photo-placeholder">Photo</div></div>
+          <div class="speaker-name">Speaker TBA</div>
+          <div class="speaker-title">Researcher · Applied AI</div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><div class="speaker-photo-placeholder">Photo</div></div>
+          <div class="speaker-name">Speaker TBA</div>
+          <div class="speaker-title">CTO · Utah AI Company</div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><div class="speaker-photo-placeholder">Photo</div></div>
+          <div class="speaker-name">Speaker TBA</div>
+          <div class="speaker-title">Founder · Developer Tools</div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><div class="speaker-photo-placeholder">Photo</div></div>
+          <div class="speaker-name">Speaker TBA</div>
+          <div class="speaker-title">Investor · AI Focus</div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><div class="speaker-photo-placeholder">Photo</div></div>
+          <div class="speaker-name">Speaker TBA</div>
+          <div class="speaker-title">Governor's Office · Economic Opportunity</div>
+        </div>
+      </div>
+      <p class="speakers-cta">Interested in speaking? <a href="mailto:hello@justbuild.ing">Get in touch</a>.</p>
+    </div>
+  </section>
+
+  <!-- Who Should Come? -->
+  <section class="section reveal">
+    <div class="container">
+      <h2 class="section-heading">Who should come?</h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h3>Engineers & Designers</h3>
+          <p>Level up with AI tools, compete for prizes, get recruited</p>
+        </div>
+        <div class="audience-card">
+          <h3>Students</h3>
+          <p>High school and university welcome, first-timers encouraged</p>
+        </div>
+        <div class="audience-card">
+          <h3>Business Owners & Operators</h3>
+          <p>Bring a real problem, leave with a working prototype</p>
+        </div>
+        <div class="audience-card">
+          <h3>Anyone Curious</h3>
+          <p>Never touched AI? This is your starting line.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsors -->
+  <section class="section section-alt reveal" id="sponsors">
+    <div class="container">
+      <h2 class="section-heading">Our Sponsors</h2>
+      <div class="sponsor-grid"></div>
+    </div>
+  </section>
+
+  <!-- Get Involved -->
+  <section class="section reveal" id="get-involved">
+    <div class="container">
+      <h2 class="section-heading">Get Involved</h2>
+      <p class="section-subheading">More than just showing up? Here's how to go deeper.</p>
+      <div class="involve-grid">
+        <a href="sponsors#tiers" class="involve-card">
+          <span class="involve-num">01</span>
+          <h3>Sponsor</h3>
+          <p>Put your brand in front of hundreds of builders and run a real bounty on Saturday.</p>
+          <span class="involve-arrow">See sponsor tiers →</span>
+        </a>
+        <a href="sponsors#judges" class="involve-card">
+          <span class="involve-num">02</span>
+          <h3>Judge</h3>
+          <p>Evaluate the best AI projects built in 8 hours. Front-row seat to Utah's top builders.</p>
+          <span class="involve-arrow">Apply to judge →</span>
+        </a>
+        <a href="sponsors#speakers-apply" class="involve-card">
+          <span class="involve-num">03</span>
+          <h3>Speak</h3>
+          <p>Share your work on Friday with 400+ engineers, founders, and students.</p>
+          <span class="involve-arrow">Submit a talk →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-bar reveal">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-number">400+</span>
+          <span class="stat-label">Builders in our community</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">16+</span>
+          <span class="stat-label">Sponsors who trust us</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">$50K+</span>
+          <span class="stat-label">In prizes awarded</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who is JustBuild? -->
+  <section class="section reveal">
+    <div class="container">
+      <div class="content-narrow text-center">
+        <h2>Who is JustBuild?</h2>
+        <p>JustBuild is Utah's premier AI community on a mission to make Utah AI-native. With a thriving community of 400+ engineers, founders, and builders, we host hackathons, coworking sessions, and events that bring together the best talent in the state.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt reveal" id="faq">
+    <div class="container">
+      <h2 class="section-heading">FAQ</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Who can attend?</summary>
+          <p>Anyone. No credentials required.</p>
+        </details>
+        <details>
+          <summary>Is it free?</summary>
+          <p>Yes.</p>
+        </details>
+        <details>
+          <summary>Do I need to know how to code?</summary>
+          <p>No. Friday is designed for complete beginners.</p>
+        </details>
+        <details>
+          <summary>Do I need a team?</summary>
+          <p>No. Teams form Saturday morning.</p>
+        </details>
+        <details>
+          <summary>Where is it?</summary>
+          <p>Draper, UT. Exact venue announced soon.</p>
+        </details>
+        <details>
+          <summary>What's the difference between Friday and Saturday?</summary>
+          <p>Friday = education and speakers. Saturday = building and competing.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-wordmark">JustBuild</div>
+          <p class="footer-tagline">Make Utah AI-Native</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://justbuild.ing" target="_blank">justbuild.ing</a>
+          <a href="https://aibuilderday.com" target="_blank">aibuilderday.com</a>
+          <a href="https://tinyurl.com/jb-slackinvite" target="_blank">Slack</a>
+          <a href="https://x.com/justbuildHQ" target="_blank">X</a>
+          <a href="https://www.linkedin.com/company/justbuild" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>hello@justbuild.ing</span>
+        <a href="llms.txt" class="footer-agents">For agents → llms.txt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
