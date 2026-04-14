@@ -26,6 +26,14 @@ const CONFIG = {
     { name: 'Sorenson Capital', logo: 'assets/judges/sorenson.webp', url: 'https://sorensoncapital.com/' },
   ],
 
+  // Confirmed 2026 AI Builder Day sponsors. Add one per commit:
+  //   { name: 'Acme', logo: 'assets/event-sponsors/acme.png', url: 'https://acme.com', tier: 'bounty' }
+  eventSponsors: [],
+
+  // Confirmed Friday speakers. Add one per confirmation:
+  //   { name: 'Jane Doe', title: 'Founder · Acme', photo: 'assets/speakers/jane.jpg' }
+  speakers: [],
+
   sponsors: [
     { name: 'Cerebras', logo: 'assets/sponsors/cerebras.png', url: 'https://www.cerebras.ai/' },
     { name: 'Manus', logo: 'assets/sponsors/manus.png', url: 'https://manus.im/app' },
@@ -58,7 +66,7 @@ const CONFIG = {
   },
 
   links: {
-    register: 'https://lu.ma/justbuild',
+    register: 'https://luma.com/aibuilderday',
     sponsorPage: 'sponsors',
     contact: 'mailto:hello@justbuild.ing',
     justbuild: 'https://justbuild.ing',

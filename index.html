@@ -22,16 +22,16 @@
   <!-- Navigation -->
   <nav class="navbar navbar-transparent">
     <a href="/" class="nav-wordmark">JustBuild</a>
-    <span class="nav-center">May 8, 2026 · Draper UT</span>
+    <span class="nav-center">May 8–9, 2026 · Draper UT</span>
     <button id="nav-toggle" class="nav-hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
   <div id="nav-menu" class="nav-menu">
     <a href="/">Home</a>
-    <a href="sponsors">Sponsors</a>
+    <a href="sponsors.html">Sponsors</a>
     <a data-link="register" class="nav-btn" target="_blank">Register</a>
-    <a href="mailto:hello@justbuild.ing">Contact</a>
+    <button type="button" class="copy-email-link" data-copy-email="hello@justbuild.ing">Contact</button>
   </div>
 
   <!-- Hero -->
@@ -43,7 +43,7 @@
     <div class="hero-bottom">
       <span class="hero-tagline">UTAH'S <em>BIGGEST</em> AI EVENT</span>
       <div class="hero-actions">
-        <a href="sponsors" class="btn btn-outline">Sponsor</a>
+        <a href="sponsors.html" class="btn btn-outline">Sponsor</a>
         <a data-link="register" class="btn btn-primary" target="_blank">Register</a>
       </div>
     </div>
@@ -63,8 +63,7 @@
         </div>
         <div class="flanked-text">
           <h2>What is AI Builder Day?</h2>
-          <p class="lead">Two days to spark new companies, ship tools sponsors will actually use, and connect technical and non-technical builders. Where future founders meet co-founders, problems get solved, and people find jobs.</p>
-          <p class="credit">Presented by the Startup State Initiative &amp; JustBuild. Hosted at JobNimbus HQ.</p>
+          <p class="lead">Two days to spark new companies, ship real tools, and connect technical and non-technical builders across Utah's AI ecosystem.</p>
         </div>
         <div class="event-photo">
           <img src="assets/event2.jpg" alt="JustBuild hackathon group photo" loading="lazy">
@@ -204,6 +203,19 @@
     </div>
   </section>
 
+  <!-- Speakers -->
+  <section class="section reveal" id="speakers">
+    <div class="container">
+      <h2 class="section-heading">Speakers</h2>
+      <p class="section-subheading">A mix of founders, engineers, and researchers for Friday. Being confirmed now.</p>
+      <div class="speakers-grid"></div>
+      <div class="speakers-cta">
+        <p>Want to share what you're building?</p>
+        <a data-link="formSpeaker" class="btn btn-dark" target="_blank" rel="noopener">Apply to Speak →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Who Should Come? -->
   <section class="section reveal">
     <div class="container">
@@ -233,7 +245,7 @@
     </div>
   </section>
 
-  <!-- Backed By: Partners + Judges + Sponsor CTA -->
+  <!-- Backed By: Partners + Judges + 2026 Sponsors -->
   <section class="section section-alt reveal" id="sponsors">
     <div class="container">
       <h2 class="section-heading">Backed by Utah's startup ecosystem</h2>
@@ -241,9 +253,11 @@
       <div class="partner-grid"></div>
       <p class="partners-eyebrow partners-eyebrow-second">Judges from</p>
       <div class="judge-firm-grid"></div>
+      <p class="partners-eyebrow partners-eyebrow-second">2026 Sponsors</p>
+      <div class="event-sponsor-grid"></div>
       <div class="sponsor-cta">
-        <p>Want to put your brand in front of hundreds of builders?</p>
-        <a href="sponsors#tiers" class="btn btn-dark">Become a sponsor →</a>
+        <p>Announcing sponsors as they commit — be the first logo here.</p>
+        <a href="sponsors.html#tiers" class="btn btn-dark">Become a sponsor →</a>
       </div>
     </div>
   </section>
@@ -254,23 +268,23 @@
       <h2 class="section-heading">Get Involved</h2>
       <p class="section-subheading">More than just showing up? Here's how to go deeper.</p>
       <div class="involve-grid">
-        <a href="sponsors#tiers" class="involve-card">
+        <a href="sponsors.html#tiers" class="involve-card">
           <span class="involve-num">01</span>
           <h3>Sponsor</h3>
           <p>Put your brand in front of hundreds of builders and run a real bounty on Saturday.</p>
           <span class="involve-arrow">See sponsor tiers →</span>
         </a>
-        <a href="sponsors#judges" class="involve-card">
+        <a data-link="formJudge" class="involve-card" target="_blank" rel="noopener">
           <span class="involve-num">02</span>
           <h3>Judge</h3>
           <p>Evaluate the best AI projects built in 8 hours. Front-row seat to Utah's top builders.</p>
-          <span class="involve-arrow">Apply to judge →</span>
+          <span class="involve-arrow">Apply to Judge →</span>
         </a>
-        <a href="sponsors#speakers-apply" class="involve-card">
+        <a data-link="formSpeaker" class="involve-card" target="_blank" rel="noopener">
           <span class="involve-num">03</span>
           <h3>Speak</h3>
           <p>Share your work on Friday with 400+ engineers, founders, and students.</p>
-          <span class="involve-arrow">Submit a talk →</span>
+          <span class="involve-arrow">Apply to Speak →</span>
         </a>
       </div>
     </div>
@@ -356,7 +370,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>hello@justbuild.ing</span>
+        <button type="button" class="copy-email-link footer-email" data-copy-email="hello@justbuild.ing">hello@justbuild.ing</button>
         <a href="llms.txt" class="footer-agents">For agents → llms.txt</a>
       </div>
     </div>

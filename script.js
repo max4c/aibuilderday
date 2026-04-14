@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavScroll();
   initPartnershipBadge();
   initReveal();
+  initCopyEmail();
   renderSponsors();
   renderPartners();
   renderJudgeFirms();
+  renderEventSponsors();
+  renderSpeakers();
   renderTierPrices();
   renderStats();
   renderLinks();
@@ -128,6 +131,26 @@ function initReveal() {
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
+function initCopyEmail() {
+  document.querySelectorAll('[data-copy-email]').forEach(el => {
+    el.addEventListener('click', async () => {
+      const email = el.getAttribute('data-copy-email');
+      const original = el.textContent;
+      try {
+        await navigator.clipboard.writeText(email);
+        el.textContent = email + ' — Copied!';
+      } catch {
+        el.textContent = email;
+      }
+      el.classList.add('copied');
+      setTimeout(() => {
+        el.textContent = original;
+        el.classList.remove('copied');
+      }, 1800);
+    });
+  });
+}
+
 function renderSponsors() {
   document.querySelectorAll('.sponsor-grid').forEach(grid => {
     grid.innerHTML = CONFIG.sponsors.map(s =>
@@ -161,6 +184,45 @@ function renderJudgeFirms() {
         '<span class="partner-fallback">' + j.name + '</span>' +
       '</a>'
     ).join('');
+  });
+}
+
+function renderEventSponsors() {
+  document.querySelectorAll('.event-sponsor-grid').forEach(grid => {
+    if (!CONFIG.eventSponsors || CONFIG.eventSponsors.length === 0) {
+      grid.classList.add('empty');
+      grid.innerHTML = '<p class="roster-pending">Announcing as they commit.</p>';
+      return;
+    }
+    grid.classList.remove('empty');
+    grid.innerHTML = CONFIG.eventSponsors.map(s =>
+      '<a href="' + s.url + '" class="partner-card" target="_blank" rel="noopener">' +
+        '<img src="' + s.logo + '" alt="' + s.name + '" ' +
+          'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+        '<span class="partner-fallback">' + s.name + '</span>' +
+      '</a>'
+    ).join('');
+  });
+}
+
+function renderSpeakers() {
+  document.querySelectorAll('.speakers-grid').forEach(grid => {
+    if (!CONFIG.speakers || CONFIG.speakers.length === 0) {
+      grid.classList.add('empty');
+      grid.innerHTML = '<p class="roster-pending">Speakers confirmed on a rolling basis.</p>';
+      return;
+    }
+    grid.classList.remove('empty');
+    grid.innerHTML = CONFIG.speakers.map(s => {
+      const photo = s.photo
+        ? '<img src="' + s.photo + '" alt="' + s.name + '">'
+        : '<div class="speaker-photo-placeholder">' + s.name.split(' ').map(n => n[0]).join('') + '</div>';
+      return '<div class="speaker-card">' +
+        '<div class="speaker-photo">' + photo + '</div>' +
+        '<div class="speaker-name">' + s.name + '</div>' +
+        '<div class="speaker-title">' + (s.title || '') + '</div>' +
+      '</div>';
+    }).join('');
   });
 }
 

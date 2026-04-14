@@ -122,6 +122,8 @@ def send(api_key, to, subject, text, html, reply_to=None):
         headers={
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
+            "User-Agent": "aibuilderday-cli/1.0",
+            "Accept": "application/json",
         },
         method="POST",
     )
