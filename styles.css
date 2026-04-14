@@ -437,7 +437,7 @@ p:last-child { margin-bottom: 0; }
 .flanked-text .credit {
   font-size: 0.85rem;
   color: var(--text-subtle);
-  max-width: 32ch;
+  max-width: 44ch;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
@@ -526,14 +526,17 @@ p:last-child { margin-bottom: 0; }
 
 /* --- Audience Grid --- */
 .audience-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
 }
 .audience-card {
+  flex: 0 1 calc(20% - 13px);
+  min-width: 200px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 32px 28px;
+  padding: 28px 24px;
   transition: border-color var(--transition), transform var(--transition);
 }
 .audience-card:hover {
@@ -723,6 +726,85 @@ p:last-child { margin-bottom: 0; }
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   color: var(--text-subtle);
+}
+
+/* --- Partners & Judge Firms Strip --- */
+.partners-strip {
+  padding: 3.5rem 0 2.5rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-light);
+}
+.partners-eyebrow {
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin: 0 0 1.4rem;
+  font-weight: 600;
+}
+.partners-eyebrow-second {
+  margin-top: 2.5rem;
+}
+.partner-grid,
+.judge-firm-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+.partner-card {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  background: var(--white);
+  transition: border-color var(--transition), transform var(--transition);
+  text-align: center;
+}
+.partner-card:hover {
+  border-color: var(--text);
+  transform: translateY(-2px);
+}
+.partner-card img {
+  max-height: 68px;
+  max-width: 170px;
+  width: 100%;
+  object-fit: contain;
+}
+.partner-card img[src$="siliconslopes.png"],
+.partner-card img[src$="convoi.png"] {
+  filter: invert(1);
+}
+.partner-fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--text-subtle);
+  line-height: 1.25;
+}
+@media (max-width: 900px) {
+  .partner-grid, .judge-firm-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 480px) {
+  .partner-grid, .judge-firm-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.sponsor-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-light);
+}
+.sponsor-cta p {
+  color: var(--text-subtle);
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 /* --- Stats Bar --- */
@@ -1010,6 +1092,18 @@ p:last-child { margin-bottom: 0; }
   font-weight: 600;
 }
 
+.confirmed-judges {
+  text-align: center;
+  max-width: 720px;
+  margin: -2.5rem auto 3rem;
+  color: var(--text-subtle);
+  font-size: 0.95rem;
+}
+.confirmed-judges strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 /* --- Speaker Formats --- */
 .format-grid {
   display: grid;
@@ -1171,6 +1265,65 @@ p:last-child { margin-bottom: 0; }
 }
 .footer-agents:hover { opacity: 1; }
 
+/* --- Apply Forms --- */
+.apply-form {
+  max-width: 640px;
+  margin: 2.5rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+.cta-section .apply-form {
+  margin-top: 2rem;
+}
+.apply-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-subtle);
+  letter-spacing: 0.01em;
+  flex: 1;
+}
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+  font: inherit;
+  font-weight: 400;
+  color: var(--text);
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--white);
+  transition: border-color var(--transition);
+}
+.apply-form input:focus,
+.apply-form select:focus,
+.apply-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.apply-form textarea {
+  resize: vertical;
+  min-height: 88px;
+}
+.apply-form .form-row {
+  display: flex;
+  gap: 1rem;
+}
+.apply-form button {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 640px) {
+  .apply-form .form-row { flex-direction: column; }
+  .apply-form button { align-self: stretch; }
+}
+
 /* --- Reveal Animation --- */
 .reveal {
   opacity: 0;
@@ -1191,7 +1344,6 @@ p:last-child { margin-bottom: 0; }
   .tiers-grid { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
   .two-days-grid { grid-template-columns: 1fr; }
   .schedule-grid { grid-template-columns: 1fr; gap: 48px; }
-  .audience-grid { grid-template-columns: 1fr 1fr; }
   .speakers-grid { grid-template-columns: 1fr 1fr; }
   .involve-grid { grid-template-columns: 1fr; max-width: 520px; }
   .split-grid { grid-template-columns: 1fr; }
@@ -1231,7 +1383,6 @@ p:last-child { margin-bottom: 0; }
   .flanked-content .event-photo:last-child { display: none; }
 
   /* Cards */
-  .audience-grid { grid-template-columns: 1fr; }
   .speakers-grid { grid-template-columns: 1fr 1fr; }
   .sponsor-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .sponsor-card { padding: 20px 12px; min-height: 70px; }

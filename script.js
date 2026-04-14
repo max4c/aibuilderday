@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initPartnershipBadge();
   initReveal();
   renderSponsors();
+  renderPartners();
+  renderJudgeFirms();
   renderTierPrices();
   renderStats();
   renderLinks();
@@ -133,6 +135,30 @@ function renderSponsors() {
         '<img src="' + s.logo + '" alt="' + s.name + '" ' +
           'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
         '<span class="sponsor-fallback">' + s.name + '</span>' +
+      '</a>'
+    ).join('');
+  });
+}
+
+function renderPartners() {
+  document.querySelectorAll('.partner-grid').forEach(grid => {
+    grid.innerHTML = CONFIG.partners.map(p =>
+      '<a href="' + p.url + '" class="partner-card" target="_blank" rel="noopener">' +
+        '<img src="' + p.logo + '" alt="' + p.name + '" ' +
+          'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+        '<span class="partner-fallback">' + p.name + '</span>' +
+      '</a>'
+    ).join('');
+  });
+}
+
+function renderJudgeFirms() {
+  document.querySelectorAll('.judge-firm-grid').forEach(grid => {
+    grid.innerHTML = CONFIG.judgeFirms.map(j =>
+      '<a href="' + j.url + '" class="partner-card" target="_blank" rel="noopener">' +
+        '<img src="' + j.logo + '" alt="' + j.name + '" ' +
+          'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+        '<span class="partner-fallback">' + j.name + '</span>' +
       '</a>'
     ).join('');
   });

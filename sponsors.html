@@ -206,9 +206,10 @@
   <!-- Judges Section -->
   <section class="section section-alt reveal" id="judges">
     <div class="container">
-      <span class="section-eyebrow">Saturday · Hackathon</span>
+      <span class="section-eyebrow">Saturday · Builder Day Hackathon</span>
       <h2 class="section-heading">Judge the Hackathon</h2>
       <p class="section-subheading">Spend Saturday evening evaluating what Utah's best builders shipped in 8 hours. Great for experienced engineers, founders, and investors.</p>
+      <p class="confirmed-judges"><strong>Confirmed:</strong> Judges from Convoi Ventures, Album, Pelion Venture Partners, Run Ventures, Kickstart, and Sorenson Capital.</p>
 
       <div class="split-grid">
         <div class="split-card">
@@ -233,9 +234,19 @@
 
       <p class="commitment-line">Time commitment: <strong>Saturday, May 9 · 5:30 – 8:00 PM</strong></p>
 
-      <div class="section-cta">
-        <a href="mailto:hello@justbuild.ing?subject=Interested%20in%20judging%20AI%20Builder%20Day" class="btn btn-dark">Apply to judge</a>
-      </div>
+      <form class="apply-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <input type="hidden" name="_subject" value="AI Builder Day — Judge Application">
+        <div class="form-row">
+          <label>Name<input type="text" name="name" required></label>
+          <label>Email<input type="email" name="email" required></label>
+        </div>
+        <div class="form-row">
+          <label>Company<input type="text" name="company"></label>
+          <label>Role / Title<input type="text" name="role"></label>
+        </div>
+        <label>Expertise<textarea name="expertise" rows="3" placeholder="Your background and why you want to judge"></textarea></label>
+        <button type="submit" class="btn btn-dark">Apply to Judge</button>
+      </form>
     </div>
   </section>
 
@@ -272,9 +283,23 @@
         <p>AI agents · LLM applications · AI tooling · AI for beginners · AI in production · Applied research · AI for business · Context engineering · Evals &amp; observability · Voice &amp; vision</p>
       </div>
 
-      <div class="section-cta">
-        <a href="mailto:hello@justbuild.ing?subject=Interested%20in%20speaking%20at%20AI%20Builder%20Day" class="btn btn-dark">Submit a talk</a>
-      </div>
+      <form class="apply-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <input type="hidden" name="_subject" value="AI Builder Day — Speaker Application">
+        <div class="form-row">
+          <label>Name<input type="text" name="name" required></label>
+          <label>Email<input type="email" name="email" required></label>
+        </div>
+        <label>Company / Title<input type="text" name="company"></label>
+        <label>Preferred format
+          <select name="format">
+            <option value="keynote">Keynote (15–20 min)</option>
+            <option value="workshop">Workshop (45 min)</option>
+            <option value="panel">Panel (30 min)</option>
+          </select>
+        </label>
+        <label>Talk Pitch<textarea name="pitch" rows="4" required placeholder="Working title, abstract, and why this audience"></textarea></label>
+        <button type="submit" class="btn btn-dark">Submit a Talk</button>
+      </form>
     </div>
   </section>
 
@@ -283,8 +308,28 @@
     <div class="container">
       <div class="content-narrow text-center">
         <h2>Ready to partner?</h2>
-        <p>Sponsor, judge, or speak — reach out and we'll get you the full details.</p>
-        <a href="mailto:hello@justbuild.ing" class="btn btn-dark btn-large">Get in Touch</a>
+        <p>Tell us what you're looking for and we'll follow up within 48 hours.</p>
+        <form class="apply-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+          <input type="hidden" name="_subject" value="AI Builder Day — Sponsor Inquiry">
+          <div class="form-row">
+            <label>Name<input type="text" name="name" required></label>
+            <label>Email<input type="email" name="email" required></label>
+          </div>
+          <div class="form-row">
+            <label>Company<input type="text" name="company" required></label>
+            <label>Tier interest
+              <select name="tier">
+                <option value="">Not sure yet</option>
+                <option value="base">Base ($2,500)</option>
+                <option value="bounty">Bounty ($5,000)</option>
+                <option value="headline">Headline ($10,000)</option>
+                <option value="custom">Custom</option>
+              </select>
+            </label>
+          </div>
+          <label>Message<textarea name="message" rows="4" placeholder="What you want to get out of sponsoring"></textarea></label>
+          <button type="submit" class="btn btn-dark btn-large">Submit Inquiry</button>
+        </form>
       </div>
     </div>
   </section>

@@ -9,6 +9,23 @@ const CONFIG = {
 
   showPartnershipBadge: true,
 
+  partners: [
+    { name: 'Startup State Initiative', logo: 'assets/partners/goeo.png', url: 'https://business.utah.gov/' },
+    { name: 'The Nucleus Institute', logo: 'assets/partners/nucleus.webp', url: 'https://www.thenucleus.institute/' },
+    { name: 'Silicon Slopes', logo: 'assets/partners/siliconslopes.png', url: 'https://www.siliconslopes.com/' },
+    { name: 'Utah Tech Week', logo: 'assets/partners/utahtechweek.png', url: 'https://utahtechweek.com/' },
+    { name: 'Lassonde Entrepreneur Institute', logo: 'assets/partners/lassonde.png', url: 'https://lassonde.utah.edu/' },
+  ],
+
+  judgeFirms: [
+    { name: 'Convoi Ventures', logo: 'assets/judges/convoi.png', url: 'https://www.convoi.vc/' },
+    { name: 'Album', logo: 'assets/judges/album.svg', url: 'https://album.vc/' },
+    { name: 'Pelion Venture Partners', logo: 'assets/judges/pelion.svg', url: 'https://pelionvp.com/' },
+    { name: 'Run Ventures', logo: 'assets/judges/run.svg', url: 'https://runventures.com/' },
+    { name: 'Kickstart', logo: 'assets/judges/kickstart.png', url: 'https://kickstartfund.com/' },
+    { name: 'Sorenson Capital', logo: 'assets/judges/sorenson.webp', url: 'https://sorensoncapital.com/' },
+  ],
+
   sponsors: [
     { name: 'Cerebras', logo: 'assets/sponsors/cerebras.png', url: 'https://www.cerebras.ai/' },
     { name: 'Manus', logo: 'assets/sponsors/manus.png', url: 'https://manus.im/app' },
