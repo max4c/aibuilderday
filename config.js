@@ -66,5 +66,8 @@ const CONFIG = {
     slack: 'https://tinyurl.com/jb-slackinvite',
     twitter: 'https://x.com/justbuildHQ',
     linkedin: 'https://www.linkedin.com/company/justbuild',
+    formJudge: 'https://docs.google.com/forms/d/e/1FAIpQLSfuVZV3-8JRqevAwSL4Dajhu3bGL20-Gxh3UABUpYZqTDhoaQ/viewform',
+    formSponsor: 'https://docs.google.com/forms/d/e/1FAIpQLSfseqkpR5zccC1ypQOgrq5hI58qzSFnqi74WQb6Bgk0C0kWLQ/viewform',
+    formSpeaker: 'https://docs.google.com/forms/d/e/1FAIpQLSdnorsK9JBLiFQetXsLkPiZ7lT7RaJ-jK_4k0tF1eRyI1I9ag/viewform',
   },
 };
