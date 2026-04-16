@@ -28,7 +28,9 @@ const CONFIG = {
 
   // Confirmed 2026 AI Builder Day sponsors. Add one per commit:
   //   { name: 'Acme', logo: 'assets/event-sponsors/acme.png', url: 'https://acme.com', tier: 'bounty' }
-  eventSponsors: [],
+  eventSponsors: [
+    { name: 'Leland', logo: 'assets/sponsors/leland.png', url: 'https://www.joinleland.com/' },
+  ],
 
   // Confirmed Friday speakers. Add one per confirmation:
   //   { name: 'Jane Doe', title: 'Founder · Acme', photo: 'assets/speakers/jane.jpg' }

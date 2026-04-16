@@ -22,31 +22,47 @@ function initCountdown() {
   function pad(n) { return String(n).padStart(2, '0'); }
 
   el.innerHTML =
-    group('days', 'Days') + sep() +
-    group('hours', 'Hours') + sep() +
-    group('mins', 'Mins');
+    group('days') + sep() +
+    group('hours') + sep() +
+    group('mins') + sep() +
+    group('secs');
 
-  function group(id, label) {
+  function group(id) {
     return '<div class="flip-group"><div class="flip-digits">' +
       card('fc-' + id + '0') + card('fc-' + id + '1') +
-      '</div><div class="flip-label">' + label + '</div></div>';
+      '</div></div>';
   }
   function card(id) {
-    return '<div class="flip-card" id="' + id + '"><span>0</span></div>';
+    return '<div class="flip-card" id="' + id + '">' +
+      '<div class="flip-half flip-top"><span>0</span></div>' +
+      '<div class="flip-half flip-bottom"><span>0</span></div>' +
+      '<div class="flip-half flip-top flip-flipper flip-flipper-top"><span>0</span></div>' +
+      '<div class="flip-half flip-bottom flip-flipper flip-flipper-bottom"><span>0</span></div>' +
+    '</div>';
   }
   function sep() { return '<div class="flip-sep">:</div>'; }
 
   function setDigit(id, val) {
     var cardEl = document.getElementById(id);
     if (!cardEl) return;
-    var span = cardEl.querySelector('span');
-    if (span.textContent === val) return;
+    var halves = cardEl.children;
+    var topStatic = halves[0].firstChild;
+    var bottomStatic = halves[1].firstChild;
+    var topFlip = halves[2].firstChild;
+    var bottomFlip = halves[3].firstChild;
+    if (topStatic.textContent === val) return;
+    if (cardEl.classList.contains('flipping')) return;
 
+    var oldVal = topStatic.textContent;
+    topFlip.textContent = oldVal;
+    bottomFlip.textContent = val;
+    topStatic.textContent = val;
     cardEl.classList.add('flipping');
     setTimeout(function() {
-      span.textContent = val;
+      bottomStatic.textContent = val;
+      topFlip.textContent = val;
       cardEl.classList.remove('flipping');
-    }, 300);
+    }, 600);
   }
 
   function update() {
@@ -67,6 +83,7 @@ function initCountdown() {
     var d = pad(Math.floor(diff / 86400000));
     var h = pad(Math.floor((diff % 86400000) / 3600000));
     var m = pad(Math.floor((diff % 3600000) / 60000));
+    var s = pad(Math.floor((diff % 60000) / 1000));
 
     setDigit('fc-days0', d[0]);
     setDigit('fc-days1', d[1]);
@@ -74,6 +91,8 @@ function initCountdown() {
     setDigit('fc-hours1', h[1]);
     setDigit('fc-mins0', m[0]);
     setDigit('fc-mins1', m[1]);
+    setDigit('fc-secs0', s[0]);
+    setDigit('fc-secs1', s[1]);
   }
 
   update();

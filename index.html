@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
   <title>AI Builder Day — Utah's Biggest AI Event | May 8–9, 2026</title>
   <meta name="description" content="Two days of learning, building, and launching. AI Builder Day brings together engineers, students, business owners, and first-timers for Utah's biggest AI event.">
   <meta property="og:title" content="AI Builder Day — May 8–9, 2026 · Draper, UT">
@@ -36,6 +39,10 @@
 
   <!-- Hero -->
   <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-bg.png">
+      <source src="assets/hero.webm" type="video/webm">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
     <div class="hero-content">
       <div id="countdown" class="countdown"></div>
       <h1 class="hero-title">AI BUILDER DAY</h1>
@@ -72,8 +79,58 @@
     </div>
   </section>
 
+  <!-- Who Should Come? -->
+  <section class="section reveal">
+    <div class="container">
+      <h2 class="section-heading">Who should come?</h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h3>Founders</h3>
+          <p>Current or aspiring. Meet co-founders, find your next bet.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Engineers &amp; Builders</h3>
+          <p>Ship real tools against sponsor bounties. Compete for prizes.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Designers &amp; Product Thinkers</h3>
+          <p>Shape what gets built. Pair with engineers over the weekend.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Operators &amp; Growth Leaders</h3>
+          <p>Bring real problems. Leave with working prototypes.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Investors</h3>
+          <p>Spot talent and teams worth backing — live, in the room.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Students</h3>
+          <p>Undergrads and high schoolers. Build alongside Utah's best engineers and founders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Backed By: Partners + Judges + 2026 Sponsors -->
+  <section class="section section-alt reveal" id="sponsors">
+    <div class="container">
+      <h2 class="section-heading">Backed by Utah's startup ecosystem</h2>
+      <p class="partners-eyebrow">2026 Sponsors</p>
+      <div class="event-sponsor-grid event-sponsor-grid-featured"></div>
+      <p class="partners-eyebrow partners-eyebrow-second">Supported by</p>
+      <div class="partner-grid"></div>
+      <p class="partners-eyebrow partners-eyebrow-second">Judges from</p>
+      <div class="judge-firm-grid"></div>
+      <div class="sponsor-cta">
+        <p>Announcing sponsors as they commit — be the first logo here.</p>
+        <a href="sponsors.html#tiers" class="btn btn-dark">Become a sponsor →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Schedule -->
-  <section class="section section-alt reveal" id="schedule">
+  <section class="section reveal" id="schedule">
     <div class="container">
       <h2 class="section-heading">Schedule</h2>
       <p class="section-subheading">Two days. One mission: build.</p>
@@ -189,65 +246,6 @@
     </div>
   </section>
 
-  <!-- Speakers -->
-  <section class="section reveal" id="speakers">
-    <div class="container">
-      <h2 class="section-heading">Speakers</h2>
-      <p class="section-subheading">A mix of founders, engineers, and researchers for Friday. Being confirmed now.</p>
-      <div class="speakers-grid"></div>
-      <div class="speakers-cta">
-        <p>Want to share what you're building?</p>
-        <a data-link="formSpeaker" class="btn btn-dark" target="_blank" rel="noopener">Apply to Speak →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Who Should Come? -->
-  <section class="section reveal">
-    <div class="container">
-      <h2 class="section-heading">Who should come?</h2>
-      <div class="audience-grid">
-        <div class="audience-card">
-          <h3>Founders</h3>
-          <p>Current or aspiring. Meet co-founders, find your next bet.</p>
-        </div>
-        <div class="audience-card">
-          <h3>Engineers &amp; Builders</h3>
-          <p>Ship real tools against sponsor bounties. Compete for prizes.</p>
-        </div>
-        <div class="audience-card">
-          <h3>Designers &amp; Product Thinkers</h3>
-          <p>Shape what gets built. Pair with engineers over the weekend.</p>
-        </div>
-        <div class="audience-card">
-          <h3>Operators &amp; Growth Leaders</h3>
-          <p>Bring real problems. Leave with working prototypes.</p>
-        </div>
-        <div class="audience-card">
-          <h3>Investors</h3>
-          <p>Spot talent and teams worth backing — live, in the room.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Backed By: Partners + Judges + 2026 Sponsors -->
-  <section class="section section-alt reveal" id="sponsors">
-    <div class="container">
-      <h2 class="section-heading">Backed by Utah's startup ecosystem</h2>
-      <p class="partners-eyebrow">Supported by</p>
-      <div class="partner-grid"></div>
-      <p class="partners-eyebrow partners-eyebrow-second">Judges from</p>
-      <div class="judge-firm-grid"></div>
-      <p class="partners-eyebrow partners-eyebrow-second">2026 Sponsors</p>
-      <div class="event-sponsor-grid"></div>
-      <div class="sponsor-cta">
-        <p>Announcing sponsors as they commit — be the first logo here.</p>
-        <a href="sponsors.html#tiers" class="btn btn-dark">Become a sponsor →</a>
-      </div>
-    </div>
-  </section>
-
   <!-- Get Involved -->
   <section class="section reveal" id="get-involved">
     <div class="container">
@@ -335,6 +333,20 @@
           <summary>What's the difference between Friday and Saturday?</summary>
           <p>Friday = education and speakers. Saturday = building and competing.</p>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta reveal">
+    <div class="container">
+      <div class="content-narrow text-center">
+        <h2>Ready to build?</h2>
+        <p class="lead">May 8–9, 2026 · Draper, UT. Free to attend.</p>
+        <div class="final-cta-actions">
+          <a data-link="register" class="btn btn-primary btn-large" target="_blank" rel="noopener">Register</a>
+          <a href="sponsors.html" class="btn btn-outline btn-large">Sponsor</a>
+        </div>
       </div>
     </div>
   </section>
