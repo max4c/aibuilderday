@@ -56,8 +56,8 @@ const CONFIG = {
   ],
 
   tiers: {
-    base: { name: 'Base Sponsor', price: 2500 },
-    bounty: { name: 'Bounty Sponsor', price: 5000 },
+    base: { name: 'Builder', price: 2500 },
+    bounty: { name: 'Partner', price: 5000 },
   },
 
   stats: {
