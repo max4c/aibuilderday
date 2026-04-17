@@ -110,12 +110,20 @@ function initMobileNav() {
     document.body.style.overflow = open ? 'hidden' : '';
   });
 
-  menu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
+  menu.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('click', () => {
       menu.classList.remove('open');
       toggle.classList.remove('open');
       document.body.style.overflow = '';
     });
+  });
+
+  menu.addEventListener('click', (e) => {
+    if (e.target === menu) {
+      menu.classList.remove('open');
+      toggle.classList.remove('open');
+      document.body.style.overflow = '';
+    }
   });
 }
 
