@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   renderSponsors();
   renderPartners();
   renderJudgeFirms();
+  renderPresentingSponsor();
+  renderBountyPartners();
   renderEventSponsors();
   renderSpeakers();
   renderTierPrices();
@@ -112,6 +114,7 @@ function initMobileNav() {
 
   menu.querySelectorAll('a, button').forEach(el => {
     el.addEventListener('click', () => {
+      if (el.hasAttribute('data-copy-keep-menu')) return;
       menu.classList.remove('open');
       toggle.classList.remove('open');
       document.body.style.overflow = '';
@@ -162,16 +165,19 @@ function initCopyEmail() {
   document.querySelectorAll('[data-copy-email]').forEach(el => {
     el.addEventListener('click', async () => {
       const email = el.getAttribute('data-copy-email');
-      const original = el.textContent;
+      const target = el.querySelector('.nav-contact-copy') || el;
+      const original = target.textContent;
+      let copied = false;
       try {
         await navigator.clipboard.writeText(email);
-        el.textContent = email + ' — Copied!';
-      } catch {
-        el.textContent = email;
-      }
+        copied = true;
+      } catch {}
+      target.textContent = copied
+        ? (target === el ? email + ' — Copied!' : 'Copied!')
+        : (target === el ? email : 'Press Cmd+C');
       el.classList.add('copied');
       setTimeout(() => {
-        el.textContent = original;
+        target.textContent = original;
         el.classList.remove('copied');
       }, 1800);
     });
@@ -211,6 +217,36 @@ function renderJudgeFirms() {
         '<span class="partner-fallback">' + j.name + '</span>' +
       '</a>'
     ).join('');
+  });
+}
+
+function renderBountyPartners() {
+  document.querySelectorAll('.bounty-partner-grid').forEach(function(grid) {
+    if (!CONFIG.bountyPartners || CONFIG.bountyPartners.length === 0) {
+      grid.style.display = 'none';
+      return;
+    }
+    grid.innerHTML = CONFIG.bountyPartners.map(function(p) {
+      return '<a href="' + p.url + '" class="partner-card" target="_blank" rel="noopener">' +
+        '<img src="' + p.logo + '" alt="' + p.name + '" ' +
+          'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+        '<span class="partner-fallback">' + p.name + '</span>' +
+      '</a>';
+    }).join('');
+  });
+}
+
+function renderPresentingSponsor() {
+  var s = CONFIG.presentingSponsor;
+  document.querySelectorAll('.presenting-sponsor').forEach(function(el) {
+    if (!s) { el.style.display = 'none'; return; }
+    el.innerHTML =
+      '<a href="' + s.url + '" class="partner-card presenting-card" target="_blank" rel="noopener">' +
+        '<img src="' + s.logo + '" alt="' + s.name + '" ' +
+          'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+        '<span class="partner-fallback">' + s.name + '</span>' +
+      '</a>' +
+      (s.venue ? '<p class="presenting-venue">Hosting at ' + s.venue + '</p>' : '');
   });
 }
 

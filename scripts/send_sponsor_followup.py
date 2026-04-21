@@ -51,7 +51,7 @@ A few next steps:
 Let us know if you have any questions. Looking forward to May 8–9!
 
 {sender}
-AI Builder Day — May 8–9, Draper UT
+AI Builder Day — May 8–9, Lehi UT
 hello@justbuild.ing | aibuilderday.com
 Join the JustBuild community: {slack_url}
 """
@@ -80,7 +80,7 @@ TEMPLATE_HTML = """<!DOCTYPE html>
 
 <p>
   {sender}<br>
-  AI Builder Day — May 8–9, Draper UT<br>
+  AI Builder Day — May 8–9, Lehi UT<br>
   <a href="mailto:hello@justbuild.ing">hello@justbuild.ing</a> | <a href="https://aibuilderday.com">aibuilderday.com</a><br>
   <a href="{slack_url}">Join the JustBuild community</a>
 </p>

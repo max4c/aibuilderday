@@ -2,16 +2,20 @@ const CONFIG = {
   event: {
     name: 'AI Builder Day',
     dates: 'May 8\u20139, 2026',
-    location: 'Draper, UT',
+    location: 'Lehi, UT',
     startDate: new Date('2026-05-08T09:00:00-06:00'),
     endDate: new Date('2026-05-09T23:59:59-06:00'),
   },
 
   showPartnershipBadge: true,
 
-  partners: [
-    { name: 'Startup State Initiative', logo: 'assets/partners/goeo.png', url: 'https://business.utah.gov/' },
+  bountyPartners: [
+    { name: 'Go Utah', logo: 'assets/partners/goeo.png', url: 'https://business.utah.gov/' },
+    { name: 'Startup State Initiative', logo: 'assets/partners/startup-state.jpg', url: 'https://business.utah.gov/startup-state/' },
     { name: 'The Nucleus Institute', logo: 'assets/partners/nucleus.webp', url: 'https://www.thenucleus.institute/' },
+  ],
+
+  partners: [
     { name: 'Silicon Slopes', logo: 'assets/partners/siliconslopes.png', url: 'https://www.siliconslopes.com/' },
     { name: 'Utah Tech Week', logo: 'assets/partners/utahtechweek.png', url: 'https://utahtechweek.com/' },
     { name: 'Lassonde Entrepreneur Institute', logo: 'assets/partners/lassonde.png', url: 'https://lassonde.utah.edu/' },
@@ -26,10 +30,19 @@ const CONFIG = {
     { name: 'Sorenson Capital', logo: 'assets/judges/sorenson.webp', url: 'https://sorensoncapital.com/' },
   ],
 
+  presentingSponsor: {
+    name: 'JobNimbus',
+    logo: 'assets/sponsors/jobnimbus.png',
+    url: 'https://www.jobnimbus.com/',
+    venue: 'JobNimbus HQ · Lehi',
+  },
+
   // Confirmed 2026 AI Builder Day sponsors. Add one per commit:
   //   { name: 'Acme', logo: 'assets/event-sponsors/acme.png', url: 'https://acme.com', tier: 'bounty' }
   eventSponsors: [
     { name: 'Leland', logo: 'assets/sponsors/leland.png', url: 'https://www.joinleland.com/' },
+    { name: 'Madethis', logo: 'assets/sponsors/madethis.svg', url: '#' },
+    { name: 'Cheers', logo: 'assets/sponsors/cheers.svg', url: '#' },
   ],
 
   // Confirmed Friday speakers. Add one per confirmation:
@@ -74,8 +87,7 @@ const CONFIG = {
     aibuilderday: 'https://aibuilderday.com',
     slack: 'https://tinyurl.com/jb-slackinvite',
     twitter: 'https://x.com/justbuildHQ',
-    linkedin: 'https://www.linkedin.com/company/justbuild',
-    formJudge: 'https://docs.google.com/forms/d/e/1FAIpQLSfuVZV3-8JRqevAwSL4Dajhu3bGL20-Gxh3UABUpYZqTDhoaQ/viewform',
+    linkedin: 'https://www.linkedin.com/company/justbuild-ing/',
     formSponsor: 'https://docs.google.com/forms/d/e/1FAIpQLSfseqkpR5zccC1ypQOgrq5hI58qzSFnqi74WQb6Bgk0C0kWLQ/viewform',
     formSpeaker: 'https://docs.google.com/forms/d/e/1FAIpQLSdnorsK9JBLiFQetXsLkPiZ7lT7RaJ-jK_4k0tF1eRyI1I9ag/viewform',
   },
