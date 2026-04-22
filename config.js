@@ -42,8 +42,8 @@ const CONFIG = {
   //   { name: 'Acme', logo: 'assets/event-sponsors/acme.png', url: 'https://acme.com', tier: 'bounty' }
   eventSponsors: [
     { name: 'Leland', logo: 'assets/sponsors/leland.png', url: 'https://www.joinleland.com/' },
-    { name: 'Madethis', logo: 'assets/sponsors/madethis.svg', url: '#' },
-    { name: 'Cheers', logo: 'assets/sponsors/cheers.svg', url: '#' },
+    { name: 'MadeThis', logo: 'assets/sponsors/madethis.svg', url: 'https://madethis.com/' },
+    { name: 'Cheers', logo: 'assets/sponsors/cheers.svg', url: 'https://cheers.tech/' },
   ],
 
   // Confirmed Friday speakers. Add one per confirmation:
