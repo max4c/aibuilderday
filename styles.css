@@ -392,7 +392,7 @@ p:last-child { margin-bottom: 0; }
   line-height: 1.1;
 }
 .hero-tagline em {
-  font-style: italic;
+  font-style: normal;
 }
 .hero-date-mobile {
   display: none;
@@ -1681,7 +1681,7 @@ p:last-child { margin-bottom: 0; }
     text-shadow: 0 2px 14px rgba(0,0,0,0.5);
   }
   .hero-tagline em {
-    font-style: italic;
+    font-style: normal;
   }
   .hero-date-mobile {
     display: block;
