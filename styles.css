@@ -639,6 +639,33 @@ img[src*="startup-state"] {
   .hosted-by-sep { font-size: 1.3rem; }
 }
 
+/* Dark-hero variant (sponsors page) */
+.hosted-by--on-dark {
+  padding: 0;
+  margin-top: 2.25rem;
+}
+.hosted-by--on-dark .hosted-by-label {
+  color: rgba(250, 247, 242, 0.75);
+  margin-bottom: 16px;
+}
+.hosted-by--on-dark .hosted-by-logos {
+  background: var(--bg);
+  border-radius: 100px;
+  padding: 14px 28px;
+}
+.hosted-by--on-dark .hosted-by-logo {
+  height: 32px;
+}
+.hosted-by--on-dark .hosted-by-sep {
+  color: var(--text-subtle);
+  font-size: 1.35rem;
+}
+@media (max-width: 600px) {
+  .hosted-by--on-dark .hosted-by-logos { padding: 10px 18px; gap: 14px; }
+  .hosted-by--on-dark .hosted-by-logo { height: 26px; }
+  .hosted-by--on-dark .hosted-by-sep { font-size: 1.15rem; }
+}
+
 /* --- Flanked Content --- */
 .flanked-content {
   display: grid;
