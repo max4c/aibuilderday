@@ -1282,13 +1282,19 @@ img[src*="startup-state"] {
 .sponsors-hero {
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background:
     linear-gradient(180deg, rgba(55, 48, 45, 0.55) 0%, rgba(55, 48, 45, 0.75) 100%),
     url('assets/hero-bg.png');
   background-size: cover;
   background-position: center bottom;
   color: var(--bg);
-  padding: 160px 0 80px;
   text-align: center;
 }
 .sponsors-hero::after {
