@@ -41,8 +41,8 @@ const CONFIG = {
   // Confirmed 2026 AI Builder Day sponsors. Add one per commit:
   //   { name: 'Acme', logo: 'assets/event-sponsors/acme.png', url: 'https://acme.com', tier: 'bounty' }
   eventSponsors: [
-    { name: 'Leland', logo: 'assets/sponsors/leland.png', url: 'https://www.joinleland.com/' },
     { name: 'MadeThis', logo: 'assets/sponsors/madethis.svg', url: 'https://madethis.com/' },
+    { name: 'Leland', logo: 'assets/sponsors/leland.png', url: 'https://www.joinleland.com/' },
     { name: 'Cheers', logo: 'assets/sponsors/cheers.svg', url: 'https://cheers.tech/' },
     { name: 'Surge', logo: 'assets/sponsors/surge.svg', url: 'https://surge.app/' },
   ],
