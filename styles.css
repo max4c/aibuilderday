@@ -1671,7 +1671,7 @@ p:last-child { margin-bottom: 0; }
     padding: 16px;
     justify-content: center;
     align-items: center;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 120px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 125px);
   }
   .hero-tagline {
     font-size: 0.9rem;
