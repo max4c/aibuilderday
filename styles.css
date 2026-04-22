@@ -189,6 +189,20 @@ p:last-child { margin-bottom: 0; }
 .navbar-solid .nav-hamburger span {
   background: var(--text);
 }
+body.menu-open .navbar-transparent,
+body.menu-open .navbar-transparent.navbar-scrolled,
+body.menu-open .navbar-solid {
+  background: var(--text);
+  color: var(--bg);
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+body.menu-open .navbar .nav-wordmark img {
+  filter: none;
+}
+body.menu-open .navbar .nav-hamburger span {
+  background: #FFFFFF;
+}
 .nav-wordmark {
   display: inline-flex;
   align-items: center;
