@@ -41,9 +41,10 @@ const CONFIG = {
   // Confirmed 2026 AI Builder Day sponsors. Add one per commit:
   //   { name: 'Acme', logo: 'assets/event-sponsors/acme.png', url: 'https://acme.com', tier: 'bounty' }
   eventSponsors: [
+    { name: 'MadeThis', logo: 'assets/sponsors/madethis.svg', url: 'https://madethis.com/' },
     { name: 'Leland', logo: 'assets/sponsors/leland.png', url: 'https://www.joinleland.com/' },
-    { name: 'Madethis', logo: 'assets/sponsors/madethis.svg', url: '#' },
-    { name: 'Cheers', logo: 'assets/sponsors/cheers.svg', url: '#' },
+    { name: 'Cheers', logo: 'assets/sponsors/cheers.svg', url: 'https://cheers.tech/' },
+    { name: 'Surge', logo: 'assets/sponsors/surge.svg', url: 'https://surge.app/' },
   ],
 
   // Confirmed Friday speakers. Add one per confirmation:
@@ -66,7 +67,6 @@ const CONFIG = {
     { name: 'Buster', logo: 'assets/sponsors/buster.png', url: 'https://www.buster.so/' },
     { name: 'Castari', logo: 'assets/sponsors/castari.svg', url: 'https://castari.com/' },
     { name: 'Mindsmith', logo: 'assets/sponsors/mindsmith.svg', url: 'https://mindsmith.ai/' },
-    { name: 'Surge', logo: 'assets/sponsors/surge.svg', url: 'https://surge.app/' },
   ],
 
   tiers: {

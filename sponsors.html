@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://aibuilderday.com/sponsors">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="config.js" defer></script>
   <script src="script.js" defer></script>
@@ -23,9 +23,11 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-solid">
-    <a href="/" class="nav-wordmark">JustBuild</a>
-    <span class="nav-center">May 8–9, 2026 · Lehi UT</span>
+  <nav class="navbar navbar-transparent">
+    <a href="/" class="nav-wordmark" aria-label="JustBuild">
+      <img src="assets/justbuild-logo.svg" alt="JustBuild">
+    </a>
+    <span class="nav-center">May 8–9, 2026 · Lehi, UT</span>
     <button id="nav-toggle" class="nav-hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -57,8 +59,21 @@
         <a data-link="formSponsor" class="btn btn-primary" target="_blank" rel="noopener">Become a Sponsor →</a>
         <a data-link="formSpeaker" class="btn btn-outline" target="_blank" rel="noopener">Apply to be a Speaker</a>
       </div>
-      <div class="partnership-badge partnership-badge-dark">
-        <span>In partnership with the Utah Governor's Office of Economic Opportunity</span>
+    </div>
+  </section>
+
+  <!-- Hosted By -->
+  <section class="hosted-by">
+    <div class="container">
+      <span class="hosted-by-label">Hosted by</span>
+      <div class="hosted-by-logos">
+        <a href="https://justbuild.ing" target="_blank" rel="noopener" aria-label="JustBuild">
+          <img src="assets/justbuild-logo.svg" alt="JustBuild" class="hosted-by-logo hosted-by-logo-dark">
+        </a>
+        <span class="hosted-by-sep">&amp;</span>
+        <a href="https://business.utah.gov/startup-state/" target="_blank" rel="noopener" aria-label="Startup State Initiative">
+          <img src="assets/partners/startup-state.jpg" alt="Startup State Initiative" class="hosted-by-logo">
+        </a>
       </div>
     </div>
   </section>
@@ -202,7 +217,9 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="footer-wordmark">JustBuild</div>
+          <div class="footer-wordmark">
+            <img src="assets/justbuild-logo.svg" alt="JustBuild">
+          </div>
           <p class="footer-tagline">Make Utah AI-Native</p>
         </div>
         <div class="footer-links">

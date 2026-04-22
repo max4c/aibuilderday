@@ -16,7 +16,7 @@
   <meta property="og:url" content="https://aibuilderday.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="config.js" defer></script>
   <script src="script.js" defer></script>
@@ -25,8 +25,10 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-transparent">
-    <a href="/" class="nav-wordmark">JustBuild</a>
-    <span class="nav-center">May 8–9, 2026 · Lehi UT</span>
+    <a href="/" class="nav-wordmark" aria-label="JustBuild">
+      <img src="assets/justbuild-logo.svg" alt="JustBuild">
+    </a>
+    <span class="nav-center">May 8–9, 2026 · Lehi, UT</span>
     <button id="nav-toggle" class="nav-hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -58,16 +60,26 @@
     <div class="hero-bottom">
       <span class="hero-tagline">UTAH'S <em>BIGGEST</em> AI EVENT</span>
       <div class="hero-actions">
-        <a href="sponsors.html" class="btn btn-outline">Sponsor</a>
         <a data-link="register" class="btn btn-primary" target="_blank">Register</a>
       </div>
     </div>
   </section>
 
-  <!-- Partnership Badge -->
-  <div class="partnership-badge">
-    <span>In partnership with the Utah Governor's Office of Economic Opportunity</span>
-  </div>
+  <!-- Hosted By -->
+  <section class="hosted-by">
+    <div class="container">
+      <span class="hosted-by-label">Hosted by</span>
+      <div class="hosted-by-logos">
+        <a href="https://justbuild.ing" target="_blank" rel="noopener" aria-label="JustBuild">
+          <img src="assets/justbuild-logo.svg" alt="JustBuild" class="hosted-by-logo hosted-by-logo-dark">
+        </a>
+        <span class="hosted-by-sep">&amp;</span>
+        <a href="https://business.utah.gov/startup-state/" target="_blank" rel="noopener" aria-label="Startup State Initiative">
+          <img src="assets/partners/startup-state.jpg" alt="Startup State Initiative" class="hosted-by-logo">
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- What is AI Builder Day? -->
   <section class="section reveal">
@@ -144,6 +156,10 @@
       <h2 class="section-heading">Schedule</h2>
       <p class="section-subheading">Two days. One mission: build.</p>
 
+      <div class="schedule-prize">
+        <span>$35K+ in bounties · Utah's top companies</span>
+      </div>
+
       <div class="schedule-grid">
         <div class="schedule-day">
           <div class="schedule-day-header">
@@ -162,7 +178,7 @@
               <span class="schedule-time">9:30 AM</span>
               <div class="schedule-content">
                 <div class="schedule-title">Welcome &amp; Kickoff</div>
-                <div class="schedule-desc">Meet the team, what to expect today, how to get the most out of AI Builder Day</div>
+                <div class="schedule-desc">Meet the team, set the tone</div>
               </div>
             </div>
             <div class="schedule-item">
@@ -176,6 +192,7 @@
               <span class="schedule-time">11:30 AM</span>
               <div class="schedule-content">
                 <div class="schedule-title">Lunch &amp; Sponsor Expo</div>
+                <div class="schedule-desc">Grab food, meet the sponsors</div>
               </div>
             </div>
             <div class="schedule-item">
@@ -196,6 +213,7 @@
               <span class="schedule-time">4:00 PM</span>
               <div class="schedule-content">
                 <div class="schedule-title">Networking Reception</div>
+                <div class="schedule-desc">Drinks &amp; mingling before the hackathon</div>
               </div>
             </div>
           </div>
@@ -205,7 +223,6 @@
           <div class="schedule-day-header">
             <span class="schedule-day-label">Day 2 · Builder Day Hackathon</span>
             <h3>Saturday, May 9</h3>
-            <span class="schedule-day-badge">Compete for $35K+ in bounties from Utah's top companies</span>
           </div>
           <div class="schedule-items">
             <div class="schedule-item">
@@ -247,6 +264,7 @@
               <span class="schedule-time">4:00 PM</span>
               <div class="schedule-content">
                 <div class="schedule-title">Project Demos &amp; Judging</div>
+                <div class="schedule-desc">Teams demo live to judges &amp; sponsors</div>
               </div>
             </div>
             <div class="schedule-item">
@@ -366,7 +384,9 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="footer-wordmark">JustBuild</div>
+          <div class="footer-wordmark">
+            <img src="assets/justbuild-logo.svg" alt="JustBuild">
+          </div>
           <p class="footer-tagline">Make Utah AI-Native</p>
         </div>
         <div class="footer-links">
