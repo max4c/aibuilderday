@@ -18,7 +18,6 @@ jobs:
           args: >-
             --no-progress
             --accept 200,206,429
-            --exclude-path assets
             --exclude "^https://github\\.com"
             --exclude "^https://twitter\\.com"
             --exclude "^https://x\\.com"
@@ -27,6 +26,6 @@ jobs:
             --exclude "^mailto:"
             --exclude "^https://aibuilderday\\.com"
             --exclude "^https://justbuild\\.ing"
-            --base .
-            "**/*.html"
+            --root-dir ${{ github.workspace }}
+            index.html sponsors.html keynote.html
           fail: true
