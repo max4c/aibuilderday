@@ -24,15 +24,14 @@ function initCountdown() {
   function pad(n) { return String(n).padStart(2, '0'); }
 
   el.innerHTML =
-    group('days') + sep() +
-    group('hours') + sep() +
-    group('mins') + sep() +
-    group('secs');
+    group('days', 'Days') + sep() +
+    group('hours', 'Hours') + sep() +
+    group('mins', 'Mins');
 
-  function group(id) {
+  function group(id, label) {
     return '<div class="flip-group"><div class="flip-digits">' +
       card('fc-' + id + '0') + card('fc-' + id + '1') +
-      '</div></div>';
+      '</div><div class="flip-label">' + label + '</div></div>';
   }
   function card(id) {
     return '<div class="flip-card" id="' + id + '">' +
@@ -85,7 +84,6 @@ function initCountdown() {
     var d = pad(Math.floor(diff / 86400000));
     var h = pad(Math.floor((diff % 86400000) / 3600000));
     var m = pad(Math.floor((diff % 3600000) / 60000));
-    var s = pad(Math.floor((diff % 60000) / 1000));
 
     setDigit('fc-days0', d[0]);
     setDigit('fc-days1', d[1]);
@@ -93,8 +91,6 @@ function initCountdown() {
     setDigit('fc-hours1', h[1]);
     setDigit('fc-mins0', m[0]);
     setDigit('fc-mins1', m[1]);
-    setDigit('fc-secs0', s[0]);
-    setDigit('fc-secs1', s[1]);
   }
 
   update();
