@@ -1305,7 +1305,7 @@ img[src*="startup-state"] {
   align-items: center;
   justify-content: center;
   background:
-    linear-gradient(180deg, rgba(55, 48, 45, 0.55) 0%, rgba(55, 48, 45, 0.75) 100%),
+    linear-gradient(180deg, rgba(55, 48, 45, 0.05) 0%, rgba(55, 48, 45, 0.1) 60%, rgba(55, 48, 45, 0.45) 100%),
     url('assets/hero-bg.png');
   background-size: cover;
   background-position: center bottom;
@@ -1316,39 +1316,60 @@ img[src*="startup-state"] {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(55, 48, 45, 0.55) 0%, rgba(55, 48, 45, 0.75) 100%);
+  background: linear-gradient(180deg, rgba(55, 48, 45, 0.05) 0%, rgba(55, 48, 45, 0.1) 60%, rgba(55, 48, 45, 0.45) 100%);
   z-index: 1;
   pointer-events: none;
 }
-.sponsors-hero > .container {
+.sponsors-hero-content {
   position: relative;
   z-index: 2;
+  text-align: center;
+  padding: 0 32px;
+  margin-top: -40px;
+}
+.sponsors-hero-kicker {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(250, 247, 242, 0.92);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.3);
 }
 .sponsors-hero-title {
   font-family: var(--font-display);
-  font-size: 5rem;
-  font-weight: 900;
-  font-style: normal;
-  letter-spacing: 0.06em;
-  line-height: 1.05;
-  margin-bottom: 1.5rem;
+  font-size: clamp(5rem, 9vw, 9rem);
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin: 0;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.3);
 }
-.sponsors-hero-eyebrow {
-  font-family: var(--font-ui);
-  font-size: 0.95rem;
-  font-weight: 400;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: rgba(250, 247, 242, 0.75);
-  margin-bottom: 1.5rem;
+.sponsors-hero-bottom {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 max(40px, calc((100% - 1600px) / 2));
 }
 .sponsors-hero-pitch {
-  font-family: var(--font-body);
-  font-size: 1.15rem;
-  color: rgba(250, 247, 242, 0.88);
-  max-width: 520px;
-  margin: 0 auto 2.2rem;
-  line-height: 1.55;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(1.3rem, 1.7vw, 1.8rem);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  color: var(--bg);
+  max-width: 540px;
+  margin: 0;
 }
 .hero-cta-cluster {
   display: flex;
@@ -1356,7 +1377,19 @@ img[src*="startup-state"] {
   gap: 14px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2.5rem;
+}
+@media (max-width: 768px) {
+  .sponsors-hero-bottom {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 16px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+  }
+  .sponsors-hero-pitch {
+    text-align: center;
+  }
 }
 @media (max-width: 600px) {
   .hero-cta-cluster {
@@ -1366,7 +1399,6 @@ img[src*="startup-state"] {
     max-width: 320px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2.5rem;
   }
 }
 
@@ -1908,7 +1940,17 @@ img[src*="startup-state"] {
 
   /* Sponsors Page */
   .sponsors-hero { padding: 120px 0 60px; }
-  .sponsors-hero-title { font-size: 2.8rem; }
+  .sponsors-hero-title { font-size: clamp(3.2rem, 13vw, 5rem); }
+  .sponsors-hero-kicker {
+    font-size: 1rem;
+    letter-spacing: 0.22em;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.5);
+  }
+  .sponsors-hero-pitch {
+    font-size: 0.9rem;
+    letter-spacing: 0.14em;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.5);
+  }
 
   /* Footer */
   .footer-top { flex-direction: column; gap: 24px; }
@@ -1925,7 +1967,8 @@ img[src*="startup-state"] {
   .flip-sep { font-size: 1.2rem; line-height: 48px; }
   .countdown { gap: 3px; }
   .sponsor-grid { grid-template-columns: repeat(2, 1fr); }
-  .sponsors-hero-title { font-size: 2.2rem; }
+  .sponsors-hero-title { font-size: clamp(2.6rem, 13vw, 4rem); }
+  .sponsors-hero-kicker { font-size: 0.95rem; }
 }
 @media (max-width: 380px) {
   .flip-card {
