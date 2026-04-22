@@ -392,6 +392,9 @@ p:last-child { margin-bottom: 0; }
 .hero-tagline em {
   font-style: italic;
 }
+.hero-date-mobile {
+  display: none;
+}
 .hero-actions {
   display: flex;
   gap: 12px;
@@ -1663,12 +1666,31 @@ p:last-child { margin-bottom: 0; }
   /* Hero */
   .hero-title { font-size: 3.2rem; }
   .hero-bottom {
-    flex-direction: row;
-    gap: 10px;
+    flex-direction: column;
+    gap: 14px;
     padding: 16px;
     justify-content: center;
+    align-items: center;
   }
-  .hero-tagline { display: none; }
+  .hero-tagline {
+    font-size: 0.9rem;
+    letter-spacing: 0.14em;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.5);
+  }
+  .hero-tagline em {
+    font-style: italic;
+  }
+  .hero-date-mobile {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1.05rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-top: 1.1rem;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.5);
+  }
   .hero-actions { gap: 10px; }
   .countdown { gap: 4px; }
   .flip-digits { gap: 3px; }
