@@ -320,6 +320,8 @@ p:last-child { margin-bottom: 0; }
   position: relative;
   min-height: 100vh;
   min-height: 100svh;
+  min-height: 100dvh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1671,7 +1673,7 @@ p:last-child { margin-bottom: 0; }
     padding: 16px;
     justify-content: center;
     align-items: center;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 125px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 40px);
   }
   .hero-tagline {
     font-size: 0.9rem;
