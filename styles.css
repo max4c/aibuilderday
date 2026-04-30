@@ -1063,9 +1063,15 @@ img[src*="startup-state"] {
   gap: 12px;
 }
 .partner-grid {
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: 760px;
   margin: 0 auto;
+}
+.partner-grid .partner-card {
+  flex: 0 1 calc((100% - 24px) / 3);
+  min-width: 180px;
 }
 .partner-card {
   border: 1px solid var(--border-light);
@@ -1093,6 +1099,10 @@ img[src*="startup-state"] {
 .partner-card img[src$="convoi.png"] {
   filter: invert(1);
 }
+.partner-card img[src$="salesforce.png"] {
+  transform: scale(1.75);
+  transform-origin: center;
+}
 .partner-fallback {
   display: none;
   align-items: center;
@@ -1103,11 +1113,20 @@ img[src*="startup-state"] {
   color: var(--text-subtle);
   line-height: 1.25;
 }
-.event-sponsor-grid-featured,
 .bounty-partner-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+}
+.event-sponsor-grid-featured {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.event-sponsor-grid-featured .partner-card {
+  flex: 0 1 calc((100% - 32px) / 3);
+  min-width: 220px;
 }
 .bounty-partner-grid .partner-card {
   padding: 36px 30px;
@@ -1150,9 +1169,10 @@ img[src*="startup-state"] {
 }
 @media (max-width: 900px) {
   .partner-grid, .judge-firm-grid, .event-sponsor-grid { grid-template-columns: repeat(3, 1fr); }
-  .event-sponsor-grid-featured, .bounty-partner-grid { grid-template-columns: repeat(2, 1fr); }
-  .bounty-partner-grid .partner-card { min-height: 170px; padding: 32px 26px; }
-  .bounty-partner-grid .partner-card img { max-height: 96px; max-width: 220px; }
+  .bounty-partner-grid { grid-template-columns: repeat(2, 1fr); }
+  .event-sponsor-grid-featured .partner-card { flex: 0 1 calc((100% - 16px) / 2); min-width: 180px; }
+  .bounty-partner-grid .partner-card { min-height: 150px; padding: 28px 22px; }
+  .bounty-partner-grid .partner-card img { max-height: 88px; max-width: 200px; }
   .event-sponsor-grid-featured .partner-card { min-height: 130px; padding: 24px 20px; }
   .event-sponsor-grid-featured .partner-card img { max-height: 70px; max-width: 180px; }
   .presenting-sponsor .presenting-card { min-height: 190px; padding: 36px 28px; }
@@ -1160,7 +1180,9 @@ img[src*="startup-state"] {
 }
 @media (max-width: 480px) {
   .partner-grid, .judge-firm-grid, .event-sponsor-grid { grid-template-columns: repeat(2, 1fr); }
-  .event-sponsor-grid-featured, .bounty-partner-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .bounty-partner-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .event-sponsor-grid-featured { gap: 10px; }
+  .event-sponsor-grid-featured .partner-card { flex: 0 1 calc((100% - 10px) / 2); min-width: 0; }
   .presenting-sponsor { max-width: 320px; }
   .bounty-partner-grid .partner-card { min-height: 110px; padding: 18px 12px; }
   .bounty-partner-grid .partner-card img { max-height: 60px; max-width: 140px; }

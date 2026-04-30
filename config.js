@@ -11,8 +11,8 @@ const CONFIG = {
 
   bountyPartners: [
     { name: 'Go Utah', logo: 'assets/partners/goeo.png', url: 'https://business.utah.gov/' },
-    { name: 'Startup State Initiative', logo: 'assets/partners/startup-state.jpg', url: 'https://business.utah.gov/startup-state/' },
-    { name: 'The Nucleus Institute', logo: 'assets/partners/nucleus.webp', url: 'https://www.thenucleus.institute/' },
+    { name: 'The Nucleus Institute', logo: 'assets/partners/nucleus.png', url: 'https://www.thenucleus.institute/' },
+    { name: 'MadeThis', logo: 'assets/sponsors/madethis.svg', url: 'https://madethis.com/' },
   ],
 
   partners: [
@@ -41,10 +41,11 @@ const CONFIG = {
   // Confirmed 2026 AI Builder Day sponsors. Add one per commit:
   //   { name: 'Acme', logo: 'assets/event-sponsors/acme.png', url: 'https://acme.com', tier: 'bounty' }
   eventSponsors: [
-    { name: 'MadeThis', logo: 'assets/sponsors/madethis.svg', url: 'https://madethis.com/' },
     { name: 'Leland', logo: 'assets/sponsors/leland.png', url: 'https://www.joinleland.com/' },
     { name: 'Cheers', logo: 'assets/sponsors/cheers.svg', url: 'https://cheers.tech/' },
     { name: 'Surge', logo: 'assets/sponsors/surge.svg', url: 'https://surge.app/' },
+    { name: 'Salesforce', logo: 'assets/sponsors/salesforce.png', url: 'https://www.salesforce.com/' },
+    { name: 'Redo', logo: 'assets/sponsors/redo.png', url: 'https://www.getredo.com/en' },
   ],
 
   // Confirmed Friday speakers. Add one per confirmation:
@@ -63,7 +64,6 @@ const CONFIG = {
     { name: 'Sameday', logo: 'assets/sponsors/sameday.png', url: 'https://www.gosameday.com/' },
     { name: 'Remi', logo: 'assets/sponsors/remi.png', url: 'https://www.remihq.com/' },
     { name: 'Stratus', logo: 'assets/sponsors/stratus.png', url: 'https://www.usestratus.com/' },
-    { name: 'Redo', logo: 'assets/sponsors/redo.png', url: 'https://www.getredo.com/en' },
     { name: 'Buster', logo: 'assets/sponsors/buster.png', url: 'https://www.buster.so/' },
     { name: 'Castari', logo: 'assets/sponsors/castari.svg', url: 'https://castari.com/' },
     { name: 'Mindsmith', logo: 'assets/sponsors/mindsmith.svg', url: 'https://mindsmith.ai/' },
