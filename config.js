@@ -20,6 +20,7 @@ const CONFIG = {
     { name: 'Utah Tech Week', logo: 'assets/partners/utahtechweek.png', url: 'https://utahtechweek.com/' },
     { name: 'Lassonde Entrepreneur Institute', logo: 'assets/partners/lassonde.png', url: 'https://lassonde.utah.edu/' },
     { name: 'Weber State University', logo: 'assets/partners/weberstate.png', url: 'https://weber.edu/' },
+    { name: 'Utah Valley University', logo: 'assets/partners/uvu.png', url: 'https://www.uvu.edu/' },
   ],
 
   judgeFirms: [

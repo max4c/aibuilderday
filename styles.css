@@ -1230,11 +1230,15 @@ img[src*="startup-state"] {
   color: rgba(250, 247, 242, 0.8);
   margin-bottom: 2.2rem;
 }
-.final-cta-actions {
+.final-cta-actions,
+.content-narrow-actions {
   display: flex;
   gap: 14px;
   justify-content: center;
   flex-wrap: wrap;
+}
+.content-narrow-actions {
+  margin-top: 1.6rem;
 }
 @media (max-width: 600px) {
   .final-cta { padding: 72px 20px; }
