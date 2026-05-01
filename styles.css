@@ -1626,6 +1626,30 @@ img[src*="startup-state"] {
   background: #1a140a;
   transform: translateX(2px);
 }
+.involve-card-primary {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+}
+.involve-card-primary .involve-num,
+.involve-card-primary p {
+  color: rgba(250, 247, 242, 0.7);
+}
+.involve-card-primary h3 {
+  color: var(--bg);
+}
+.involve-card-primary .involve-cta {
+  background: var(--bg);
+  color: var(--text);
+}
+.involve-card-primary:hover {
+  border-color: var(--text);
+  box-shadow: 0 12px 32px rgba(55, 48, 45, 0.18);
+}
+.involve-card-primary:hover .involve-cta {
+  background: #f5efe5;
+}
+
 
 /* --- Section Eyebrow --- */
 .section-eyebrow {
