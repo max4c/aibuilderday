@@ -15,12 +15,58 @@ const CONFIG = {
     { name: 'MadeThis', logo: 'assets/sponsors/madethis.svg', url: 'https://madethis.com/' },
   ],
 
+  // Five bounty tracks. Each track has its own ruleset; fill in `rules` (array of strings)
+  // as sponsors confirm. Until rules are confirmed, the track card shows a "pitched at
+  // 1:05 PM Friday" placeholder. Multiple `logos` collapses into a combined badge row.
+  bountyTracks: [
+    {
+      name: 'Governor’s Office',
+      logos: [{ src: 'assets/partners/goeo.png', alt: 'Utah Governor’s Office of Economic Opportunity' }],
+      url: 'https://business.utah.gov/',
+      tagline: 'Build something that moves Utah forward.',
+      rules: null,
+    },
+    {
+      name: 'The Nucleus Institute',
+      logos: [{ src: 'assets/partners/nucleus.png', alt: 'The Nucleus Institute' }],
+      url: 'https://www.thenucleus.institute/',
+      tagline: 'A real bounty from Nucleus.',
+      rules: null,
+    },
+    {
+      name: 'MadeThis',
+      logos: [{ src: 'assets/sponsors/madethis.svg', alt: 'MadeThis' }],
+      url: 'https://madethis.com/',
+      tagline: 'Build with MadeThis.',
+      rules: null,
+    },
+    {
+      name: 'JobNimbus',
+      logos: [{ src: 'assets/sponsors/jobnimbus.png', alt: 'JobNimbus' }],
+      url: 'https://www.jobnimbus.com/',
+      tagline: 'A challenge from our presenting sponsor & venue host.',
+      rules: null,
+    },
+    {
+      name: 'Startup Bounty',
+      logos: [
+        { src: 'assets/sponsors/leland.png', alt: 'Leland' },
+        { src: 'assets/sponsors/surge.svg', alt: 'Surge' },
+        { src: 'assets/sponsors/cheers.svg', alt: 'Cheers' },
+      ],
+      url: null,
+      tagline: 'A combined track from Leland, Surge, and Cheers.',
+      rules: null,
+    },
+  ],
+
   partners: [
     { name: 'Silicon Slopes', logo: 'assets/partners/siliconslopes.png', url: 'https://www.siliconslopes.com/' },
     { name: 'Utah Tech Week', logo: 'assets/partners/utahtechweek.png', url: 'https://utahtechweek.com/' },
     { name: 'Lassonde Entrepreneur Institute', logo: 'assets/partners/lassonde.png', url: 'https://lassonde.utah.edu/' },
     { name: 'Weber State University', logo: 'assets/partners/weberstate.png', url: 'https://weber.edu/' },
     { name: 'Utah Valley University', logo: 'assets/partners/uvu.png', url: 'https://www.uvu.edu/' },
+    { name: 'U Career Success at the University of Utah', logo: 'assets/partners/ucareersuccess.png', url: 'https://careers.utah.edu/' },
   ],
 
   judgeFirms: [
@@ -47,6 +93,12 @@ const CONFIG = {
     { name: 'Surge', logo: 'assets/sponsors/surge.svg', url: 'https://surge.app/' },
     { name: 'Salesforce', logo: 'assets/sponsors/salesforce.png', url: 'https://www.salesforce.com/' },
     { name: 'Redo', logo: 'assets/sponsors/redo.png', url: 'https://www.getredo.com/en' },
+  ],
+
+  // Companies fueling builders with credits & infrastructure (in-kind).
+  creditSponsors: [
+    { name: 'Daytona', logo: 'assets/sponsors/daytona.png', url: 'https://www.daytona.io/' },
+    { name: 'Capy', logo: 'assets/sponsors/capy.png', url: 'https://capy.ai/' },
   ],
 
   // Confirmed Friday speakers. Add one per confirmation:

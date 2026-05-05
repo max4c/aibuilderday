@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   renderJudgeFirms();
   renderPresentingSponsor();
   renderBountyPartners();
+  renderBountyTracks();
   renderEventSponsors();
+  renderCreditSponsors();
   renderSpeakers();
   renderTierPrices();
   renderStats();
@@ -171,7 +173,7 @@ function initCopyEmail() {
         copied = true;
       } catch {}
       target.textContent = copied
-        ? (target === el ? email + ' — Copied!' : 'Copied!')
+        ? (target === el ? email + ' · Copied!' : 'Copied!')
         : (target === el ? email : 'Press Cmd+C');
       el.classList.add('copied');
       setTimeout(() => {
@@ -263,6 +265,58 @@ function renderEventSponsors() {
         '<span class="partner-fallback">' + s.name + '</span>' +
       '</a>'
     ).join('');
+  });
+}
+
+function renderBountyTracks() {
+  document.querySelectorAll('.bounty-tracks-grid').forEach(function(grid) {
+    var tracks = (CONFIG.bountyTracks || []);
+    if (tracks.length === 0) {
+      grid.innerHTML = '<p class="roster-pending">Tracks announced soon.</p>';
+      return;
+    }
+    grid.innerHTML = tracks.map(function(t, i) {
+      var num = String(i + 1).padStart(2, '0');
+      var logos = (t.logos || []).map(function(l) {
+        return '<img src="' + l.src + '" alt="' + l.alt + '" loading="lazy">';
+      }).join('');
+      var rulesBlock = (Array.isArray(t.rules) && t.rules.length > 0)
+        ? '<ul class="track-rules">' + t.rules.map(function(r) { return '<li>' + r + '</li>'; }).join('') + '</ul>'
+        : '<p class="track-rules-pending"><span class="track-rules-dot"></span>Rules pitched live · <strong>1:05 PM Friday</strong></p>';
+      var head = '<div class="track-head">' +
+        '<span class="track-num">' + num + '</span>' +
+        '<div class="track-logos' + (t.logos && t.logos.length > 1 ? ' track-logos-multi' : '') + '">' + logos + '</div>' +
+      '</div>';
+      var body = '<div class="track-body">' +
+        '<h3 class="track-name">' + t.name + '</h3>' +
+        (t.tagline ? '<p class="track-tagline">' + t.tagline + '</p>' : '') +
+        rulesBlock +
+      '</div>';
+      var inner = head + body;
+      return t.url
+        ? '<a href="' + t.url + '" class="track-card" target="_blank" rel="noopener">' + inner + '</a>'
+        : '<div class="track-card track-card-static">' + inner + '</div>';
+    }).join('');
+  });
+}
+
+function renderCreditSponsors() {
+  document.querySelectorAll('.credit-sponsor-grid').forEach(function(grid) {
+    if (!CONFIG.creditSponsors || CONFIG.creditSponsors.length === 0) {
+      grid.style.display = 'none';
+      var label = grid.previousElementSibling;
+      if (label && label.classList.contains('partners-eyebrow')) {
+        label.style.display = 'none';
+      }
+      return;
+    }
+    grid.innerHTML = CONFIG.creditSponsors.map(function(s) {
+      return '<a href="' + s.url + '" class="partner-card credit-card" target="_blank" rel="noopener">' +
+        '<img src="' + s.logo + '" alt="' + s.name + '" ' +
+          'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+        '<span class="partner-fallback">' + s.name + '</span>' +
+      '</a>';
+    }).join('');
   });
 }
 

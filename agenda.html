@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <title>Agenda · AI Builder Day · May 8–9, 2026</title>
+  <meta name="description" content="The full two-day program for AI Builder Day 2026. Talks, tutorials, workshops, the hackathon, and awards.">
+  <meta property="og:title" content="Agenda · AI Builder Day">
+  <meta property="og:description" content="Two days. Talks, tutorials, workshops, building, and awards. May 8–9, 2026 · Lehi, UT.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://aibuilderday.com/assets/og.png">
+  <meta property="og:url" content="https://aibuilderday.com/agenda">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body class="agenda-body">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-solid">
+    <a href="/" class="nav-wordmark" aria-label="JustBuild">
+      <img src="assets/justbuild-logo.svg" alt="JustBuild">
+    </a>
+    <span class="nav-center">May 8–9, 2026 · Lehi, UT</span>
+    <button id="nav-toggle" class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div id="nav-menu" class="nav-menu">
+    <a href="/">Home</a>
+    <a href="agenda.html">Agenda</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a data-link="register" class="nav-btn" target="_blank">Register</a>
+    <div class="nav-contact">
+      <span class="nav-contact-label">Contact</span>
+      <button type="button" class="nav-contact-row copy-email-link" data-copy-email="hello@justbuild.ing" data-copy-keep-menu>
+        <span class="nav-contact-email">hello@justbuild.ing</span>
+        <span class="nav-contact-copy" aria-hidden="true">Copy</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Compact Header -->
+  <header class="agenda-head">
+    <div class="container">
+      <span class="agenda-head-eyebrow">Agenda · May 8–9, 2026</span>
+      <h1 class="agenda-head-title">Agenda</h1>
+    </div>
+  </header>
+
+  <!-- Sticky Jump Tabs -->
+  <nav class="agenda-tabs" aria-label="Jump to section">
+    <div class="container">
+      <a href="#friday" class="agenda-tab" data-tab="friday">
+        <span class="tab-num">01</span>
+        <span class="tab-label">Friday</span>
+        <span class="tab-sub">Learn</span>
+      </a>
+      <a href="#saturday" class="agenda-tab" data-tab="saturday">
+        <span class="tab-num">02</span>
+        <span class="tab-label">Saturday</span>
+        <span class="tab-sub">Build</span>
+      </a>
+      <a href="#tracks" class="agenda-tab" data-tab="tracks">
+        <span class="tab-num">03</span>
+        <span class="tab-label">Tracks &amp; Bounties</span>
+        <span class="tab-sub">$35K+ on the line</span>
+      </a>
+      <a href="#rules" class="agenda-tab" data-tab="rules">
+        <span class="tab-num">04</span>
+        <span class="tab-label">Rules</span>
+        <span class="tab-sub">How it works</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Day 1 -->
+  <section class="agenda-day reveal" id="friday">
+    <div class="container">
+      <div class="day-banner">
+        <span class="day-numeral"><em>01</em></span>
+        <div class="day-banner-text">
+          <span class="day-banner-eyebrow">Day One · Learn</span>
+          <h2 class="day-banner-title">Friday, May 8</h2>
+        </div>
+        <div class="day-banner-stamp">
+          <span class="stamp-label">Building Open</span>
+          <span class="stamp-time">8 AM <span class="stamp-dash">to</span> 5 PM</span>
+        </div>
+      </div>
+
+      <ol class="agenda-list">
+        <li class="agenda-row" data-track="meal">
+          <div class="row-time">8:00 <span>AM</span></div>
+          <div class="row-dur">60 min</div>
+          <div class="row-body">
+            <div class="row-title">Doors Open</div>
+            <div class="row-desc">Check-in &amp; breakfast.</div>
+          </div>
+          <div class="row-track"><span class="dot dot-meal"></span>Activity</div>
+        </li>
+
+        <li class="agenda-row" data-track="meal">
+          <div class="row-time">9:00 <span>AM</span></div>
+          <div class="row-dur">30 min</div>
+          <div class="row-body">
+            <div class="row-title">Welcome &amp; Kickoff</div>
+          </div>
+          <div class="row-track"><span class="dot dot-meal"></span>Activity</div>
+        </li>
+
+        <li class="agenda-row" data-track="talks">
+          <div class="row-time">9:30 <span>AM</span></div>
+          <div class="row-dur">45 min</div>
+          <div class="row-body">
+            <div class="row-title">Leadership Talks</div>
+            <div class="row-desc">Founders &amp; operators on what's working with AI now.</div>
+          </div>
+          <div class="row-track"><span class="dot dot-talks"></span>Talks</div>
+        </li>
+
+        <li class="agenda-row agenda-row-quiet" data-track="meal">
+          <div class="row-time">10:15 <span>AM</span></div>
+          <div class="row-dur">15 min</div>
+          <div class="row-body">
+            <div class="row-title">Break</div>
+          </div>
+          <div class="row-track"><span class="dot dot-meal"></span>Activity</div>
+        </li>
+
+        <li class="agenda-row" data-track="tutorials">
+          <div class="row-time">10:30 <span>AM</span></div>
+          <div class="row-dur">75 min</div>
+          <div class="row-body">
+            <div class="row-title">Talks &amp; Tutorials</div>
+            <div class="row-desc">Founders, operators, and engineers sharing tactics and live demos.</div>
+          </div>
+          <div class="row-track"><span class="dot dot-tutorials"></span>Talks &amp; Tutorials</div>
+        </li>
+
+        <li class="agenda-row agenda-row-feature" data-track="meal">
+          <div class="row-time">12:00 <span>PM</span></div>
+          <div class="row-dur">30 min</div>
+          <div class="row-body">
+            <div class="row-title">Lunch</div>
+          </div>
+          <div class="row-track"><span class="dot dot-meal"></span>Lunch</div>
+        </li>
+
+        <li class="agenda-row" data-track="talks">
+          <div class="row-time">12:30 <span>PM</span></div>
+          <div class="row-dur">35 min</div>
+          <div class="row-body">
+            <div class="row-title">Featured Talks</div>
+          </div>
+          <div class="row-track"><span class="dot dot-talks"></span>Talks</div>
+        </li>
+
+        <li class="agenda-row" data-track="talks">
+          <div class="row-time">1:05 <span>PM</span></div>
+          <div class="row-dur">30 min</div>
+          <div class="row-body">
+            <div class="row-title">Bounty Presentations</div>
+            <div class="row-desc">Sponsors pitch their tracks.</div>
+          </div>
+          <div class="row-track"><span class="dot dot-talks"></span>Talks</div>
+        </li>
+
+        <li class="agenda-row agenda-row-pivot" data-track="build">
+          <div class="row-time">1:30 <span>PM</span></div>
+          <div class="row-dur">·</div>
+          <div class="row-body">
+            <div class="row-title">Hackathon Begins</div>
+            <div class="row-desc">Start building with an eye on the tracks you want to take on.</div>
+          </div>
+          <div class="row-track"><span class="dot dot-build"></span>Hackathon</div>
+        </li>
+
+        <li class="agenda-row" data-track="workshops">
+          <div class="row-time">1:30 <span>PM</span></div>
+          <div class="row-dur">60 min</div>
+          <div class="row-body">
+            <div class="row-title">Workshop for Beginners</div>
+          </div>
+          <div class="row-track"><span class="dot dot-workshops"></span>Workshops</div>
+        </li>
+
+        <li class="agenda-row" data-track="workshops">
+          <div class="row-time">2:30 <span>PM</span></div>
+          <div class="row-dur">30 min</div>
+          <div class="row-body">
+            <div class="row-title">Workshop · Parallel Agent Management</div>
+          </div>
+          <div class="row-track"><span class="dot dot-workshops"></span>Workshops</div>
+        </li>
+
+        <li class="agenda-row" data-track="workshops">
+          <div class="row-time">3:00 <span>PM</span></div>
+          <div class="row-dur">30 min</div>
+          <div class="row-body">
+            <div class="row-title">Workshop · Agent Resource Management</div>
+          </div>
+          <div class="row-track"><span class="dot dot-workshops"></span>Workshops</div>
+        </li>
+
+        <li class="agenda-row" data-track="workshops">
+          <div class="row-time">3:30 <span>PM</span></div>
+          <div class="row-dur">60 min</div>
+          <div class="row-body">
+            <div class="row-title">Workshop · Harness Engineering</div>
+          </div>
+          <div class="row-track"><span class="dot dot-workshops"></span>Workshops</div>
+        </li>
+
+        <li class="agenda-row agenda-row-quiet" data-track="meal">
+          <div class="row-time">5:00 <span>PM</span></div>
+          <div class="row-dur">·</div>
+          <div class="row-body">
+            <div class="row-title">Building Closes</div>
+          </div>
+          <div class="row-track"><span class="dot dot-meal"></span>Activity</div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Day 2 -->
+  <section class="agenda-day agenda-day-alt reveal" id="saturday">
+    <div class="container">
+      <div class="day-banner">
+        <span class="day-numeral"><em>02</em></span>
+        <div class="day-banner-text">
+          <span class="day-banner-eyebrow">Day Two · Build</span>
+          <h2 class="day-banner-title">Saturday, May 9</h2>
+        </div>
+        <div class="day-banner-stamp">
+          <span class="stamp-label">Building Open</span>
+          <span class="stamp-time">8 AM <span class="stamp-dash">to</span> 5 PM</span>
+        </div>
+      </div>
+
+      <ol class="agenda-list">
+        <li class="agenda-row agenda-row-feature" data-track="meal">
+          <div class="row-time">8:00 <span>AM</span></div>
+          <div class="row-dur">60 min</div>
+          <div class="row-body">
+            <div class="row-title">Building Opens · Breakfast</div>
+          </div>
+          <div class="row-track"><span class="dot dot-meal"></span>Meal</div>
+        </li>
+
+        <li class="agenda-row" data-track="workshops">
+          <div class="row-time">10:00 <span>AM</span></div>
+          <div class="row-dur">60 min</div>
+          <div class="row-body">
+            <div class="row-title">Workshop for Beginners</div>
+          </div>
+          <div class="row-track"><span class="dot dot-workshops"></span>Workshops</div>
+        </li>
+
+        <li class="agenda-row" data-track="workshops">
+          <div class="row-time">11:00 <span>AM</span></div>
+          <div class="row-dur">60 min</div>
+          <div class="row-body">
+            <div class="row-title">Workshop · Architected Intelligence</div>
+          </div>
+          <div class="row-track"><span class="dot dot-workshops"></span>Workshops</div>
+        </li>
+
+        <li class="agenda-row agenda-row-feature" data-track="meal">
+          <div class="row-time">12:00 <span>PM</span></div>
+          <div class="row-dur">·</div>
+          <div class="row-body">
+            <div class="row-title">Lunch · BBQ</div>
+          </div>
+          <div class="row-track"><span class="dot dot-meal"></span>Lunch</div>
+        </li>
+
+        <li class="agenda-row agenda-row-pivot" data-track="build">
+          <div class="row-time">2:00 <span>PM</span></div>
+          <div class="row-dur">90 min</div>
+          <div class="row-body">
+            <div class="row-title">Code Freeze · Judging Begins</div>
+            <div class="row-desc">Demo to judges and sponsors.</div>
+          </div>
+          <div class="row-track"><span class="dot dot-build"></span>Hackathon</div>
+        </li>
+
+        <li class="agenda-row" data-track="build">
+          <div class="row-time">3:30 <span>PM</span></div>
+          <div class="row-dur">30 min</div>
+          <div class="row-body">
+            <div class="row-title">Judges Deliberate</div>
+          </div>
+          <div class="row-track"><span class="dot dot-build"></span>Hackathon</div>
+        </li>
+
+        <li class="agenda-row agenda-row-finale" data-track="talks">
+          <div class="row-time">4:00 <span>PM</span></div>
+          <div class="row-dur">60 min</div>
+          <div class="row-body">
+            <div class="row-title">Awards Ceremony</div>
+            <div class="row-desc">Winners announced. Prizes handed out.</div>
+          </div>
+          <div class="row-track"><span class="dot dot-talks"></span>Finale</div>
+        </li>
+
+        <li class="agenda-row agenda-row-quiet" data-track="meal">
+          <div class="row-time">5:00 <span>PM</span></div>
+          <div class="row-dur">·</div>
+          <div class="row-body">
+            <div class="row-title">Building Closes</div>
+          </div>
+          <div class="row-track"><span class="dot dot-meal"></span>Activity</div>
+        </li>
+      </ol>
+
+      <p class="agenda-disclaimer">
+        Times and titles are subject to change as speakers confirm.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tracks & Bounties -->
+  <section class="agenda-info reveal" id="tracks">
+    <div class="container">
+      <div class="info-head">
+        <span class="info-eyebrow">03 · Tracks &amp; Bounties</span>
+        <h2 class="info-title">Five tracks.</h2>
+        <p class="info-deck">Final rules pitched live at <strong>1:05 PM Friday</strong> during Bounty Presentations.</p>
+      </div>
+
+      <div class="bounty-tracks-grid"></div>
+
+      <div class="info-cta">
+        <a href="sponsors.html#tiers" class="btn btn-dark">Run a bounty as a sponsor →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules -->
+  <section class="agenda-info agenda-info-alt reveal" id="rules">
+    <div class="container">
+      <div class="info-head">
+        <span class="info-eyebrow">04 · Rules</span>
+        <h2 class="info-title">How it works.</h2>
+      </div>
+
+      <div class="rules-callout">
+        <span class="rules-callout-tag">General rules</span>
+        <p>These apply to every team. <strong>Each track has its own additional rules</strong>, pitched live at <strong>1:05 PM Friday</strong> during Bounty Presentations.</p>
+      </div>
+
+      <ol class="rules-list">
+        <li>
+          <span class="rules-num">01</span>
+          <div class="rules-body">
+            <h3>Build during the event.</h3>
+            <p>Fresh code, fresh ideas. You can bring boilerplate and dependencies, but the core build happens on-site between Friday afternoon and Saturday 2 PM.</p>
+          </div>
+        </li>
+        <li>
+          <span class="rules-num">02</span>
+          <div class="rules-body">
+            <h3>Use any tools you want.</h3>
+            <p>Any model, framework, library, API. Bring your own laptop and your own accounts. We'll have credit sponsors covering most of what you'll reach for.</p>
+          </div>
+        </li>
+        <li>
+          <span class="rules-num">03</span>
+          <div class="rules-body">
+            <h3>Compete for as many tracks as you want.</h3>
+            <p>One project can be submitted to multiple tracks. Just check each track's rules before you commit. They vary.</p>
+          </div>
+        </li>
+        <li>
+          <span class="rules-num">04</span>
+          <div class="rules-body">
+            <h3>Demo to win.</h3>
+            <p>Code freezes Saturday at 2 PM. You demo to judges and sponsors live. Awards at 4 PM.</p>
+          </div>
+        </li>
+        <li>
+          <span class="rules-num">05</span>
+          <div class="rules-body">
+            <h3>Be excellent to each other.</h3>
+            <p>Help your neighbors. Mentors, sponsors, and judges are all here to help. Go talk to them.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="rules-cta">
+        <p class="rules-cta-label">Got a question?</p>
+        <a data-link="slack" class="btn btn-dark" target="_blank" rel="noopener">Ask in our Slack →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta reveal">
+    <div class="container">
+      <div class="content-narrow text-center">
+        <h2>See you May 8.</h2>
+        <p class="lead">Free to attend.</p>
+        <div class="final-cta-actions">
+          <a data-link="register" class="btn btn-primary btn-large" target="_blank" rel="noopener">Register</a>
+          <a href="sponsors.html" class="btn btn-outline btn-large">Sponsor</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-wordmark">
+            <img src="assets/justbuild-logo.svg" alt="JustBuild">
+          </div>
+          <p class="footer-tagline">Make Utah AI-Native</p>
+        </div>
+        <div class="footer-links">
+          <a data-link="justbuild" target="_blank">justbuild.ing</a>
+          <a data-link="aibuilderday" target="_blank">aibuilderday.com</a>
+          <a data-link="slack" target="_blank">Slack</a>
+          <a data-link="twitter" target="_blank">X</a>
+          <a data-link="linkedin" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <button type="button" class="copy-email-link footer-email" data-copy-email="hello@justbuild.ing">hello@justbuild.ing</button>
+        <a href="llms.txt" class="footer-agents">For agents → llms.txt</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

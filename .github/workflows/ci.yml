@@ -27,5 +27,5 @@ jobs:
             --exclude "^https://aibuilderday\\.com"
             --exclude "^https://justbuild\\.ing"
             --root-dir ${{ github.workspace }}
-            index.html sponsors.html keynote.html
+            index.html sponsors.html agenda.html keynote.html
           fail: true
