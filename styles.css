@@ -137,6 +137,16 @@ p:last-child { margin-bottom: 0; }
   background: var(--bg);
   color: var(--text);
 }
+.btn-light {
+  background: var(--bg);
+  color: var(--text);
+  border-color: var(--bg);
+}
+.btn-light:hover {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
 .btn-large {
   padding: 18px 48px;
   font-size: 1.05rem;
