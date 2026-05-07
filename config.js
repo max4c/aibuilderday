@@ -27,17 +27,17 @@ const CONFIG = {
       rules: null,
     },
     {
-      name: 'The Nucleus Institute',
-      logos: [{ src: 'assets/partners/nucleus.png', alt: 'The Nucleus Institute' }],
-      url: 'bounty-nucleus.html',
-      tagline: 'Utah Innovation Connections Hub.',
-      rules: null,
-    },
-    {
       name: 'Governor’s Office of Economic Development',
       logos: [{ src: 'assets/partners/goed.png', alt: 'Utah Governor’s Office of Economic Development' }],
       url: 'bounty-goed.html',
       tagline: 'Make Utah’s startup ecosystem visible. Two prompts, $5,000 each.',
+      rules: null,
+    },
+    {
+      name: 'The Nucleus Institute',
+      logos: [{ src: 'assets/partners/nucleus.png', alt: 'The Nucleus Institute' }],
+      url: 'bounty-nucleus.html',
+      tagline: 'Utah Innovation Connections Hub.',
       rules: null,
     },
     {
