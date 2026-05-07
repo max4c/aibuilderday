@@ -99,8 +99,8 @@ const CONFIG = {
   creditSponsors: [
     { name: 'Cursor', logo: 'assets/sponsors/cursor.svg', url: 'https://cursor.com/' },
     { name: 'MadeThis', logo: 'assets/sponsors/madethis.svg', url: 'https://madethis.com/' },
-    { name: 'Daytona', logo: 'assets/sponsors/daytona.png', url: 'https://www.daytona.io/' },
     { name: 'Capy', logo: 'assets/sponsors/capy.svg', url: 'https://capy.ai/' },
+    { name: 'Daytona', logo: 'assets/sponsors/daytona.png', url: 'https://www.daytona.io/' },
   ],
 
   // Confirmed Friday speakers. Add one per confirmation:
