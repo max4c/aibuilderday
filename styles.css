@@ -3273,6 +3273,26 @@ img[src*="startup-state"] {
   line-height: 1.5;
   margin: 14px 0 0;
 }
+.tile-chip {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  margin-top: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--text);
+}
+.tile-chip-good {
+  background: rgba(34, 120, 60, 0.10);
+  color: #1f5d3a;
+  border-color: rgba(34, 120, 60, 0.32);
+}
 .tile-cta {
   display: inline-block;
   margin-top: auto;
