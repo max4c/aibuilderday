@@ -2426,6 +2426,10 @@ img[src*="startup-state"] {
 .info-cta {
   text-align: center;
   margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 /* --- Bounty Tracks Grid --- */
@@ -2821,4 +2825,367 @@ img[src*="startup-state"] {
   .flip-sep { font-size: 1rem; line-height: 42px; }
   .countdown { gap: 2px; }
   .flip-digits { gap: 2px; }
+}
+
+/* --- Bounties page --- */
+.bounties-deck {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--text-subtle);
+  line-height: 1.65;
+  max-width: 720px;
+  margin: 14px 0 0;
+}
+.bounties-tabs {
+  position: sticky;
+  top: 62px;
+  z-index: 90;
+  background: rgba(250, 247, 242, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.bounties-tabs .container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  padding: 0 32px;
+}
+.bounties-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 14px;
+  border-left: 1px solid var(--border-light);
+  color: var(--text);
+  position: relative;
+  transition: background var(--transition);
+  text-align: left;
+}
+.bounties-tab:first-child { border-left: none; }
+.bounties-tab::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: transparent;
+  transition: background var(--transition);
+}
+.bounties-tab:hover {
+  background: rgba(232, 118, 43, 0.06);
+}
+.bounties-tab:hover::before {
+  background: var(--orange);
+}
+
+.bounties-stack {
+  padding: 64px 0 88px;
+}
+.bounties-stack .container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 920px;
+}
+
+.bounty-detail-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 34px 36px 32px;
+  scroll-margin-top: 168px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.bounty-detail-card:hover {
+  border-color: var(--text);
+  box-shadow: 0 14px 36px rgba(55, 48, 45, 0.06);
+}
+.bounty-detail-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border-light);
+}
+.bounty-detail-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--orange);
+  flex-shrink: 0;
+}
+.bounty-detail-meta {
+  min-width: 0;
+}
+.bounty-detail-eyebrow {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: 6px;
+}
+.bounty-detail-title {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: 0 0 4px;
+  color: var(--text);
+}
+.bounty-detail-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-subtle);
+  margin: 0;
+}
+.bounty-detail-prize {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  flex-shrink: 0;
+}
+.prize-label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: 4px;
+}
+.prize-amount {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--accent);
+}
+.prize-extra {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-subtle);
+  font-style: italic;
+  margin-top: 6px;
+  max-width: 200px;
+}
+
+.bounty-detail-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--bg-alt);
+}
+.pill-good {
+  border-color: rgba(34, 120, 60, 0.35);
+  background: rgba(34, 120, 60, 0.08);
+  color: #1f5d3a;
+}
+.pill-warn {
+  border-color: rgba(232, 118, 43, 0.4);
+  background: rgba(232, 118, 43, 0.1);
+  color: #a8501c;
+}
+.pill-quiet {
+  border-style: dashed;
+  background: transparent;
+  color: var(--text-subtle);
+  font-style: italic;
+}
+
+.bounty-detail-body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+.bounty-detail-body p {
+  margin: 0 0 12px;
+}
+.bounty-detail-body p:last-child { margin-bottom: 0; }
+.bounty-detail-body a {
+  color: var(--accent);
+  border-bottom: 1px solid currentColor;
+  transition: opacity var(--transition);
+}
+.bounty-detail-body a:hover { opacity: 0.7; }
+
+.bounty-detail-criteria h3 {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin: 0 0 14px;
+}
+.criteria-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  counter-reset: criterion;
+}
+.criteria-list li {
+  position: relative;
+  padding: 14px 16px 14px 18px;
+  background: var(--bg-alt);
+  border-left: 3px solid var(--orange);
+  border-radius: 0 6px 6px 0;
+}
+.criteria-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.criteria-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+.criteria-weight {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--orange);
+  flex-shrink: 0;
+}
+.criteria-list p {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text-subtle);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.bounty-detail-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  padding-top: 6px;
+}
+.bounty-link {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-subtle);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: color var(--transition), border-color var(--transition);
+}
+.bounty-link:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+.bounty-link-primary {
+  color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.bounty-link-primary:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
+.bounty-group {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 30px 36px 30px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+}
+.bounty-group-intro {
+  padding-bottom: 8px;
+}
+.bounty-group-intro .bounty-detail-eyebrow { color: var(--orange); }
+.bounty-group-title {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.15;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+.bounty-group-intro p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+.bounty-group-meta {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin: 4px 0 0 !important;
+}
+.bounty-group .bounty-detail-card {
+  background: var(--bg);
+}
+
+@media (max-width: 768px) {
+  .bounties-tabs { display: none; }
+  .bounties-stack { padding: 36px 0 64px; }
+  .bounties-stack .container { gap: 18px; }
+  .bounty-detail-card {
+    padding: 24px 22px 22px;
+    scroll-margin-top: 80px;
+  }
+  .bounty-detail-head {
+    grid-template-columns: auto 1fr;
+    gap: 14px;
+  }
+  .bounty-detail-num { font-size: 2.4rem; }
+  .bounty-detail-title { font-size: 1.5rem; }
+  .bounty-detail-prize {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: baseline;
+    text-align: left;
+    gap: 10px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border-light);
+  }
+  .prize-label { margin-bottom: 0; }
+  .prize-amount { font-size: 1.8rem; }
+  .prize-extra { max-width: none; margin-top: 0; }
+  .bounty-group { padding: 22px 22px 22px; }
+  .bounty-group-title { font-size: 1.4rem; }
+  .criteria-head { flex-wrap: wrap; }
 }
