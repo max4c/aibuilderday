@@ -1141,10 +1141,6 @@ img[src*="startup-state"] {
   max-height: 60px;
   max-width: 200px;
 }
-.credit-sponsor-grid .credit-card:has(img[src$="capy.png"]) {
-  background: #0E0E10;
-  border-color: #0E0E10;
-}
 .partners-eyebrow-aside {
   font-family: var(--font-body);
   font-size: 0.78rem;
