@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920,initial-scale=1">
+  <link rel="icon" href="../assets/favicon.ico" sizes="any">
+  <title>TV · Friday · AI Builder Day</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="shell.css">
+  <script src="../config.js" defer></script>
+  <script src="shell.js" defer></script>
+  <script defer>window.addEventListener('DOMContentLoaded', function () { TVShell.init({ day: 'friday' }); });</script>
+</head>
+<body class="tv-body">
+  <div class="tv-stage">
+
+    <header class="tv-top">
+      <div class="tv-brand">
+        <div class="tv-brand-hosted">
+          <span class="tv-brand-hosted-label">Hosted by</span>
+          <img class="tv-brand-logo" src="../assets/justbuild-logo.svg" alt="JustBuild">
+          <span class="tv-brand-sep">&amp;</span>
+          <img class="tv-brand-logo tv-brand-logo-state" src="../assets/partners/startup-state.png" alt="Startup State Initiative">
+        </div>
+        <div class="tv-brand-title">AI Builder Day</div>
+        <div class="tv-brand-meta">Friday, May 8, 2026 · Day One · Learn · JobNimbus HQ · Lehi, UT</div>
+      </div>
+      <div class="tv-wifi">
+        <div class="tv-wifi-label">
+          <svg class="tv-wifi-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+            <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+            <line x1="12" y1="20" x2="12.01" y2="20"/>
+          </svg>
+          Wi-Fi
+        </div>
+        <div class="tv-wifi-row">
+          <span class="tv-wifi-key">SSID</span>
+          <span class="tv-wifi-val">JN-Hackathon</span>
+        </div>
+        <div class="tv-wifi-row">
+          <span class="tv-wifi-key">Pass</span>
+          <span class="tv-wifi-val">Hackathon-heroes-26</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="tv-main">
+
+      <section class="tv-col tv-col-agenda">
+        <div class="tv-section-eyebrow">Friday, May 8</div>
+        <h2 class="tv-section-title">Day One · Learn</h2>
+        <div class="tv-section-rule"></div>
+        <ol class="tv-agenda-list" id="tv-friday-list"></ol>
+      </section>
+
+      <section class="tv-col tv-col-bounties">
+        <div class="tv-section-eyebrow">Five tracks · $35K on the line</div>
+        <h2 class="tv-section-title">Bounties</h2>
+        <div class="tv-section-rule"></div>
+        <ol class="tv-bounty-list" id="tv-bounty-list"></ol>
+        <div class="tv-bounty-footer">Full briefs · <strong>aibuilderday.com/bounties</strong></div>
+      </section>
+
+    </main>
+
+    <footer class="tv-bottom">
+      <div class="tv-sponsor-strip" id="tv-sponsor-strip"></div>
+      <div class="tv-qr">
+        <div class="tv-qr-text">
+          <div class="tv-qr-label">aibuilderday.com/agenda</div>
+          <div class="tv-qr-sub">Scan for full agenda</div>
+        </div>
+        <img class="tv-qr-img"
+             src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Faibuilderday.com%2Fagenda&margin=0&color=37302D&bgcolor=FFFFFF"
+             alt="aibuilderday.com/agenda">
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

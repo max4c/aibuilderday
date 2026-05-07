@@ -1,0 +1,414 @@
+/* ============================================
+   TV display shell · designed for 1920x1080 (16:9)
+   Shared by /tv/friday and /tv/saturday slides.
+   Sized in vh/vw so it scales to any 16:9 screen.
+   ============================================ */
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+}
+body.tv-body {
+  font-family: var(--font-body);
+  cursor: none;
+  background: var(--bg);
+}
+.tv-stage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Top band (~18%) — cloud showcase --- */
+.tv-top {
+  flex: 0 0 18vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  color: var(--bg);
+  border-bottom: 0.4vh solid var(--orange);
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(55,48,45,0.05) 0%, rgba(55,48,45,0) 30%, rgba(55,48,45,0) 60%, rgba(55,48,45,0.5) 100%),
+    url('../assets/hero-bg.png') center 60% / cover no-repeat,
+    #6F8FB5;
+  text-shadow: 0 0.3vh 1.8vh rgba(55, 48, 45, 0.55), 0 0.1vh 0.5vh rgba(55, 48, 45, 0.5);
+}
+.tv-top > * { position: relative; z-index: 1; }
+
+.tv-brand-hosted {
+  display: flex;
+  align-items: center;
+  gap: 1.4vh;
+  margin-bottom: 0.8vh;
+}
+.tv-brand-hosted-label {
+  font-family: var(--font-ui);
+  font-size: 1.4vh;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(250, 247, 242, 0.7);
+}
+.tv-brand-logo {
+  height: 2.8vh;
+  width: auto;
+  display: block;
+}
+.tv-brand-logo-state {
+  height: 3.4vh;
+  /* White wordmark version — drop-shadow keeps it legible on bright cloud. */
+  filter: drop-shadow(0 0.2vh 0.6vh rgba(55, 48, 45, 0.6)) drop-shadow(0 0 0.3vh rgba(55, 48, 45, 0.4));
+}
+.tv-brand-sep {
+  font-family: var(--font-body);
+  font-size: 1.6vh;
+  color: rgba(250, 247, 242, 0.55);
+  font-weight: 500;
+}
+.tv-brand-title {
+  font-family: var(--font-display);
+  font-size: 7.6vh;
+  line-height: 0.95;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -0.005em;
+}
+.tv-brand-meta {
+  font-family: var(--font-body);
+  font-size: 2vh;
+  color: rgba(250, 247, 242, 0.92);
+  margin-top: 0.6vh;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+/* Wi-Fi card */
+.tv-wifi {
+  text-align: right;
+  background: rgba(55, 48, 45, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.6vh 2.4vh 1.6vh 2.6vh;
+  border-radius: 1.2vh;
+  border: 1px solid rgba(250, 247, 242, 0.22);
+  text-shadow: none;
+}
+.tv-wifi-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8vh;
+  font-family: var(--font-ui);
+  font-size: 2.4vh;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 1vh;
+}
+.tv-wifi-icon {
+  width: 2.6vh;
+  height: 2.6vh;
+  stroke: var(--orange);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.tv-wifi-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.6vh;
+  justify-content: flex-end;
+  margin-top: 0.4vh;
+}
+.tv-wifi-key {
+  font-family: var(--font-body);
+  font-size: 1.4vh;
+  color: rgba(250, 247, 242, 0.55);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 6vh;
+  text-align: right;
+}
+.tv-wifi-val {
+  font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 4.2vh;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+/* --- Main body — 75% agenda + 25% bounties --- */
+.tv-main {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  min-height: 0;
+}
+.tv-col {
+  padding: 2vh 1.8vw 2vh 1.8vw;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+}
+.tv-col-agenda { padding-left: 4vw; }
+.tv-col + .tv-col {
+  border-left: 1px solid var(--border);
+}
+.tv-col-bounties {
+  background: rgba(240, 234, 224, 0.5);
+  padding-right: 4vw;
+}
+.tv-section-eyebrow {
+  font-family: var(--font-ui);
+  font-size: 1.5vh;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: 0.4vh;
+}
+.tv-section-title {
+  font-family: var(--font-display);
+  font-size: 4.6vh;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1;
+  margin-bottom: 0.8vh;
+  letter-spacing: -0.01em;
+}
+.tv-section-rule {
+  flex: 0 0 auto;
+  height: 0.18vh;
+  background: var(--border);
+  margin: 0 0 1.2vh 0;
+}
+
+/* Agenda list — Friday gets two internal columns; Saturday stays single. */
+.tv-agenda-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.tv-agenda-list.cols-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  column-gap: 2vw;
+  align-content: start;
+}
+.tv-agenda-row {
+  display: grid;
+  grid-template-columns: 8.5vh 1fr;
+  align-items: baseline;
+  padding: 0.2vh 0;
+  border-bottom: 1px solid var(--border-light);
+  gap: 1.4vh;
+  box-sizing: border-box;
+}
+.tv-agenda-time {
+  font-family: var(--font-numeric);
+  font-size: 2.1vh;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.tv-agenda-time small {
+  font-size: 1.5vh;
+  font-weight: 600;
+  color: var(--text-subtle);
+  margin-left: 0.2vh;
+}
+.tv-agenda-body { min-width: 0; }
+.tv-agenda-title {
+  font-family: var(--font-body);
+  font-size: 2.05vh;
+  font-weight: 600;
+  line-height: 1.15;
+}
+.tv-agenda-speaker {
+  font-family: var(--font-body);
+  font-size: 1.7vh;
+  color: var(--text-subtle);
+  line-height: 1.1;
+  margin-top: 0.15vh;
+}
+.tv-agenda-row.is-pivot .tv-agenda-title { color: var(--orange); }
+
+/* Saturday — fewer rows, room to breathe */
+.tv-agenda-list-saturday .tv-agenda-row {
+  padding: 0.9vh 0;
+  grid-template-columns: 11vh 1fr;
+  gap: 1.8vh;
+}
+.tv-agenda-list-saturday .tv-agenda-time { font-size: 2.9vh; }
+.tv-agenda-list-saturday .tv-agenda-time small { font-size: 1.9vh; }
+.tv-agenda-list-saturday .tv-agenda-title { font-size: 2.7vh; line-height: 1.15; }
+.tv-agenda-list-saturday .tv-agenda-speaker { font-size: 1.95vh; margin-top: 0.3vh; }
+
+/* Bounties — simple list */
+.tv-bounty-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.tv-bounty-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.6vh;
+  padding: 1vh 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.tv-bounty-row:last-child { border-bottom: 0; }
+.tv-bounty-prize {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 600;
+  color: var(--orange);
+  font-size: 4vh;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  min-width: 9vh;
+}
+.tv-bounty-meta { min-width: 0; }
+.tv-bounty-sponsor {
+  font-family: var(--font-ui);
+  font-size: 1.15vh;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: 0.3vh;
+}
+.tv-bounty-title {
+  font-family: var(--font-body);
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.tv-bounty-footer {
+  flex: 0 0 auto;
+  margin-top: 1.2vh;
+  padding-top: 1vh;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-ui);
+  font-size: 1.3vh;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  text-align: center;
+}
+.tv-bounty-footer strong {
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--text);
+  font-size: 1.55vh;
+  margin-left: 0.4vh;
+}
+
+/* --- Bottom strip (~12%) — sponsor wall --- */
+.tv-bottom {
+  flex: 0 0 12vh;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  padding: 0 4vw;
+  gap: 2vw;
+  border-top: 0.2vh solid var(--orange);
+}
+.tv-sponsor-strip {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2vh;
+  overflow: hidden;
+  min-width: 0;
+  align-self: stretch;
+  padding: 1vh 0;
+}
+.tv-sponsor-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2vw;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.tv-logo-slot {
+  flex: 1 1 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.8vh;
+  min-width: 0;
+}
+.tv-logo-slot img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+/* Silicon Slopes ships as a white-on-transparent mark designed for dark
+   backgrounds. Invert it so it reads on the cream strip. */
+.tv-logo-slot img[alt="Silicon Slopes"] { filter: invert(1); }
+/* Salesforce PNG has heavy padding around the cloud — scale it up so the
+   visual mark matches the optical size of the other logos. */
+.tv-logo-slot img[alt="Salesforce"] { transform: scale(1.55); }
+
+.tv-qr {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.4vh;
+  padding-left: 1.6vw;
+  border-left: 1px solid var(--border);
+}
+.tv-qr-text { text-align: right; }
+.tv-qr-label {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8vh;
+  line-height: 1;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.tv-qr-sub {
+  font-family: var(--font-ui);
+  font-size: 1vh;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-top: 0.4vh;
+}
+.tv-qr-img {
+  width: 8vh;
+  height: 8vh;
+  background: white;
+  padding: 0.5vh;
+  border-radius: 0.6vh;
+  display: block;
+}
