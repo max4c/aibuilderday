@@ -2808,7 +2808,7 @@ img[src*="startup-state"] {
   object-fit: contain;
 }
 .track-logos img[src$="madethis.svg"] {
-  width: 240px;
+  width: 200px;
   height: auto;
   max-height: none;
   max-width: none;
