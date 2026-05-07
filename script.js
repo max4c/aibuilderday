@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderEventSponsors();
   renderCreditSponsors();
   renderSpeakers();
+  renderSponsorThanks();
   renderTierPrices();
   renderStats();
   renderLinks();
@@ -339,6 +340,30 @@ function renderSpeakers() {
       '</div>';
     }).join('');
   });
+}
+
+function renderSponsorThanks() {
+  const grid = document.querySelector('.sponsors-thanks-grid');
+  if (!grid) return;
+  const seen = new Set();
+  const tier = (items, cls) => {
+    const filtered = (items || []).filter(s => s && s.name && !seen.has(s.name));
+    filtered.forEach(s => seen.add(s.name));
+    if (!filtered.length) return '';
+    return '<div class="thanks-row ' + cls + '">' +
+      filtered.map(s =>
+        '<a href="' + (s.url || '#') + '" class="thanks-sponsor" target="_blank" rel="noopener" title="' + s.name + '">' +
+          '<img src="' + s.logo + '" alt="' + s.name + '" loading="lazy">' +
+        '</a>'
+      ).join('') + '</div>';
+  };
+  let html = '';
+  html += tier(CONFIG.presentingSponsor ? [CONFIG.presentingSponsor] : [], 'thanks-row-xlarge');
+  html += tier(CONFIG.bountyPartners, 'thanks-row-large');
+  html += tier(CONFIG.eventSponsors, 'thanks-row-medium');
+  html += tier(CONFIG.creditSponsors, 'thanks-row-small');
+  html += tier(CONFIG.partners, 'thanks-row-small');
+  grid.innerHTML = html;
 }
 
 function renderTierPrices() {
