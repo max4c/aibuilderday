@@ -3154,13 +3154,17 @@ img[src*="startup-state"] {
 }
 
 /* --- Bounties index page --- */
+.bounties-head .agenda-head-title {
+  font-style: normal;
+  font-weight: 600;
+}
 .bounties-deck {
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--text-subtle);
   line-height: 1.65;
-  max-width: 640px;
-  margin: 14px 0 0;
+  max-width: 580px;
+  margin: 16px 0 0;
 }
 .bounties-overview {
   padding: 56px 0 96px;
@@ -3168,15 +3172,14 @@ img[src*="startup-state"] {
 .bounty-overview-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  max-width: 920px;
+  gap: 20px;
+  max-width: 940px;
   margin: 0 auto;
 }
 .bounty-tile {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 28px 28px 26px;
+  padding: 30px 30px 28px;
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -3200,49 +3203,48 @@ img[src*="startup-state"] {
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   line-height: 1;
   color: var(--orange);
 }
 .tile-prize {
   font-family: var(--font-display);
-  font-style: italic;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.85rem;
   line-height: 1;
   color: var(--accent);
 }
 .tile-eyebrow {
   display: block;
   font-family: var(--font-ui);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-subtle);
-  margin-top: 8px;
+  margin-top: 22px;
 }
 .tile-title {
   font-family: var(--font-heading);
-  font-style: italic;
+  font-style: normal;
   font-weight: 600;
-  font-size: 1.55rem;
+  font-size: 1.75rem;
   line-height: 1.2;
   color: var(--text);
-  margin: 0;
+  margin: 6px 0 0;
 }
 .tile-meta {
   font-family: var(--font-body);
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   color: var(--text-subtle);
   line-height: 1.5;
-  margin: 6px 0 0;
+  margin: 14px 0 0;
 }
 .tile-cta {
   display: inline-block;
   margin-top: auto;
-  padding-top: 18px;
+  padding-top: 24px;
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--accent);
@@ -3554,12 +3556,15 @@ img[src*="startup-state"] {
   .bounties-overview { padding: 36px 0 72px; }
   .bounty-overview-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 16px;
   }
-  .bounty-tile { padding: 22px 22px 20px; }
-  .tile-num { font-size: 2rem; }
-  .tile-prize { font-size: 1.3rem; }
-  .tile-title { font-size: 1.3rem; }
+  .bounty-tile { padding: 24px 22px 22px; }
+  .tile-num { font-size: 2.2rem; }
+  .tile-prize { font-size: 1.5rem; }
+  .tile-eyebrow { margin-top: 18px; }
+  .tile-title { font-size: 1.5rem; }
+  .tile-meta { font-size: 0.98rem; margin-top: 12px; }
+  .tile-cta { padding-top: 20px; }
   .bounty-article {
     padding: 36px 22px 56px;
   }
