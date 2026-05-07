@@ -23,7 +23,7 @@ const CONFIG = {
       name: 'JobNimbus',
       logos: [{ src: 'assets/sponsors/jobnimbus.png', alt: 'JobNimbus' }],
       url: 'bounty-jobnimbus.html',
-      tagline: 'Presenting sponsor & venue host. $10,000 on the line.',
+      tagline: 'AI estimates for contractors, in under 24 hours. $10,000.',
       rules: null,
     },
     {
