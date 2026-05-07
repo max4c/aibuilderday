@@ -39,14 +39,14 @@
 
 Six sponsor-backed tracks. One project may be submitted to multiple tracks. Final twists pitched live at 1:05 PM Friday.
 
-- **JobNimbus · $10,000:** Presenting sponsor & venue host. Brief revealed live at kickoff. Team of 3–4. 3+ years experience required.
-- **The Nucleus Institute · $5,000:** "Utah Innovation Connections Hub." Team of 1–4. Open to anyone. Brief: https://docs.google.com/document/d/1pPPe8XlYFHqZ1KvkiLyYkc7JjFSZjykcKCsqpnNu9qU/edit
-- **Governor's Office Track 01 · $5,000:** "The Founder's Navigator" — reimagine how a founder finds what they need on startup.utah.gov in under two minutes. Team of 1–3. Open to anyone.
-- **Governor's Office Track 02 · $5,000:** "The Utah Startup Map" — interactive visual map of Utah's startup ecosystem. Team of 1–3. Open to anyone. Both GOEO briefs: https://docs.google.com/document/d/1anobvCdIseWz-vrt4n0auouISyXzTXw-RrkpIq0zIpc/edit
-- **MadeThis · $5,000 + 3 months mentorship:** Start a business, validate, earn revenue. Judged on founder–market fit, idea potential, validation/revenue, and quality (25% each). Team of 1–2. Open to anyone.
-- **Startup Bounty (Leland · Surge · Cheers) · $5,000:** "Give yourself a promotion." Build an AI system that automates a real chunk of your job. Non-developers welcome. Real-world impact 50%, automation depth 25%, demo believability 25%. Team of 1–2.
+- **JobNimbus · $10,000** — Presenting sponsor & venue host. Brief revealed live at kickoff. Team of 3–4. 3+ years experience required. https://aibuilderday.com/bounty-jobnimbus
+- **The Nucleus Institute · $5,000** — "Utah Innovation Connections Hub." Team of 1–4. Open to anyone. https://aibuilderday.com/bounty-nucleus
+- **Governor's Office · The Founder's Navigator · $5,000** — Reimagine how a founder finds what they need on startup.utah.gov in under two minutes. Team of 1–3. Open to anyone. https://aibuilderday.com/bounty-goeo-navigator
+- **Governor's Office · The Utah Startup Map · $5,000** — Interactive visual map of Utah's startup ecosystem. Team of 1–3. Open to anyone. https://aibuilderday.com/bounty-goeo-map
+- **MadeThis · $5,000 + 3 months mentorship** — Start a business, validate, earn revenue. Judged on founder–market fit, idea potential, validation/revenue, and quality (25% each). Team of 1–2. Open to anyone. https://aibuilderday.com/bounty-madethis
+- **Startup Bounty (Leland · Surge · Cheers) · $5,000** — "Give yourself a promotion." Build an AI system that automates a real chunk of your job. Non-developers welcome. Real-world impact 50%, automation depth 25%, demo believability 25%. Team of 1–2. https://aibuilderday.com/bounty-startup
 
-Full briefs: https://aibuilderday.com/bounties
+Index: https://aibuilderday.com/bounties
 
 ## Sponsorship Tiers
 
