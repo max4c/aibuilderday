@@ -2365,6 +2365,18 @@ img[src*="startup-state"] {
   object-fit: cover;
   display: block;
 }
+.row-photo-logo {
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row-photo-logo img {
+  object-fit: contain;
+  padding: 4px;
+}
 .row-speaker-text { min-width: 0; }
 
 /* --- Speakers Thank You --- */
