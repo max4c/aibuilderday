@@ -10,7 +10,7 @@ const CONFIG = {
   showPartnershipBadge: true,
 
   bountyPartners: [
-    { name: 'Go Utah', logo: 'assets/partners/goeo.png', url: 'https://business.utah.gov/' },
+    { name: 'Go Utah', logo: 'assets/partners/goed.png', url: 'https://business.utah.gov/' },
     { name: 'The Nucleus Institute', logo: 'assets/partners/nucleus.png', url: 'https://www.thenucleus.institute/' },
     { name: 'MadeThis', logo: 'assets/sponsors/madethis.svg', url: 'https://madethis.com/' },
   ],
@@ -35,15 +35,15 @@ const CONFIG = {
     },
     {
       name: 'Governor’s Office · Track 01',
-      logos: [{ src: 'assets/partners/goeo.png', alt: 'Utah Governor’s Office of Economic Opportunity' }],
-      url: 'bounty-goeo-navigator.html',
+      logos: [{ src: 'assets/partners/goed.png', alt: 'Utah Governor’s Office of Economic Development' }],
+      url: 'bounty-goed-navigator.html',
       tagline: 'The Founder’s Navigator.',
       rules: null,
     },
     {
       name: 'Governor’s Office · Track 02',
-      logos: [{ src: 'assets/partners/goeo.png', alt: 'Utah Governor’s Office of Economic Opportunity' }],
-      url: 'bounty-goeo-map.html',
+      logos: [{ src: 'assets/partners/goed.png', alt: 'Utah Governor’s Office of Economic Development' }],
+      url: 'bounty-goed-map.html',
       tagline: 'The Utah Startup Map.',
       rules: null,
     },
