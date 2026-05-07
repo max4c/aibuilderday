@@ -1959,6 +1959,23 @@ img[src*="startup-state"] {
   color: var(--text);
   margin: 0;
 }
+.agenda-head-cta {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.agenda-head-cta-note {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-subtle);
+}
+@media (max-width: 600px) {
+  .agenda-head-cta { gap: 8px; }
+  .agenda-head-cta-note { font-size: 0.88rem; }
+}
 @media (max-width: 600px) {
   .agenda-head { padding: 96px 0 20px; }
   .agenda-head-eyebrow { font-size: 0.72rem; letter-spacing: 0.22em; }

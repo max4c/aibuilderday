@@ -148,7 +148,7 @@ const CONFIG = {
     contact: 'mailto:hello@justbuild.ing',
     justbuild: 'https://justbuild.ing',
     aibuilderday: 'https://aibuilderday.com',
-    slack: 'https://tinyurl.com/jb-slackinvite',
+    slack: 'https://tinyurl.com/jbslack',
     twitter: 'https://x.com/justbuildHQ',
     linkedin: 'https://www.linkedin.com/company/justbuild-ing/',
     formSponsor: 'https://docs.google.com/forms/d/e/1FAIpQLSfseqkpR5zccC1ypQOgrq5hI58qzSFnqi74WQb6Bgk0C0kWLQ/viewform',

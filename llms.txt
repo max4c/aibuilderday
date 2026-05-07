@@ -66,6 +66,6 @@ JustBuild is Utah's premier AI community on a mission to make Utah AI-native. 40
 - Bounties: https://aibuilderday.com/bounties
 - Sponsors: https://aibuilderday.com/sponsors
 - JustBuild: https://justbuild.ing
-- Slack: https://tinyurl.com/jb-slackinvite
+- Slack: https://tinyurl.com/jbslack
 - X: https://x.com/justbuildHQ
 - LinkedIn: https://www.linkedin.com/company/justbuild-ing/
