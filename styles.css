@@ -3616,6 +3616,66 @@ img[src*="startup-state"] {
   align-items: center;
   margin-bottom: 56px;
 }
+
+.bounty-judges {
+  margin-bottom: 56px;
+}
+.bounty-judges h2 {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin: 0 0 18px;
+}
+.judge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.judge-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 22px 10px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-alt);
+  color: var(--text);
+  transition: border-color var(--transition), transform var(--transition);
+  text-decoration: none;
+}
+.judge-card:hover:not(.judge-card-static) {
+  border-color: var(--text);
+  transform: translateY(-2px);
+}
+.judge-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.judge-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.judge-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.1;
+  color: var(--text);
+}
+.judge-role {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+}
 .bounty-link {
   font-family: var(--font-body);
   font-size: 0.95rem;
