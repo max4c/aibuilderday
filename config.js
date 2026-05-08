@@ -30,7 +30,7 @@ const CONFIG = {
       name: 'Governor’s Office of Economic Development',
       logos: [{ src: 'assets/partners/goed.png', alt: 'Utah Governor’s Office of Economic Development' }],
       url: 'bounty-goed.html',
-      tagline: 'Make Utah’s startup ecosystem visible. Two prompts, $5,000 each.',
+      tagline: 'Make Utah’s startup ecosystem visible. Two-part bounty, one $10,000 prize.',
       rules: null,
     },
     {
