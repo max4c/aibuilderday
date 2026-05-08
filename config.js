@@ -67,6 +67,7 @@ const CONFIG = {
     { name: 'Weber State University', logo: 'assets/partners/weberstate.png', url: 'https://weber.edu/' },
     { name: 'Utah Valley University', logo: 'assets/partners/uvu.png', url: 'https://www.uvu.edu/' },
     { name: 'U Career Success at the University of Utah', logo: 'assets/partners/ucareersuccess.png', url: 'https://careers.utah.edu/' },
+    { name: 'Waystar', logo: 'assets/partners/waystar.png', url: 'https://www.waystar.com/' },
   ],
 
   judgeFirms: [
