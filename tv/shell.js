@@ -6,7 +6,7 @@ const AGENDA = {
   friday: [
     { time: '9:00',  ampm: 'AM', title: 'Welcome & Kickoff',                                  speaker: 'Tyler Jennings' },
     { time: '9:30',  ampm: 'AM', title: 'Tyler Folkman',                                      speaker: 'JobNimbus' },
-    { time: '9:45',  ampm: 'AM', title: 'Chris Crittenden',                                   speaker: 'Sandbox' },
+    { time: '9:45',  ampm: 'AM', title: 'Brandon Doyle',                                      speaker: 'David AI' },
     { time: '10:00', ampm: 'AM', title: 'Brant Choate',                                       speaker: 'Remi' },
     { time: '10:30', ampm: 'AM', title: 'What Should AI Look Like for Our Kids?',             speaker: 'Max Forsey · Daso' },
     { time: '10:45', ampm: 'AM', title: 'John Koelliker',                                     speaker: 'Leland' },
