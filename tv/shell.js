@@ -29,6 +29,7 @@ const AGENDA = {
     { time: '9:00',  ampm: 'AM', title: 'Open Support Session',       speaker: 'JustBuild Mentors · drop in for help' },
     { time: '11:00', ampm: 'AM', title: 'Workshop · Architected Intelligence', speaker: 'Jeremy Mumford' },
     { time: '12:00', ampm: 'PM', title: 'Lunch · BBQ',                speaker: '' },
+    { time: '1:00',  ampm: 'PM', title: 'Workshop · Agent Orchestration at Scale', speaker: 'Brad Heitmann' },
     { time: '2:00',  ampm: 'PM', title: 'Code Freeze · Judging Begins', speaker: 'Demo to judges and sponsors', pivot: true },
     { time: '3:30',  ampm: 'PM', title: 'Judges Deliberate',          speaker: '' },
     { time: '4:00',  ampm: 'PM', title: 'Awards Ceremony',            speaker: 'Winners announced. Prizes handed out.', pivot: true },
