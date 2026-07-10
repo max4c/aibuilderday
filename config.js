@@ -1,10 +1,10 @@
 const CONFIG = {
   event: {
     name: 'AI Builder Day',
-    dates: 'May 8\u20139, 2026',
+    dates: 'August 14\u201315, 2026',
     location: 'Lehi, UT',
-    startDate: new Date('2026-05-08T09:00:00-06:00'),
-    endDate: new Date('2026-05-09T23:59:59-06:00'),
+    startDate: new Date('2026-08-14T09:00:00-06:00'),
+    endDate: new Date('2026-08-15T23:59:59-06:00'),
   },
 
   showPartnershipBadge: true,
