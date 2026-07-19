@@ -137,7 +137,7 @@ const CONFIG = {
   },
 
   links: {
-    register: 'https://luma.com/aibuilderday',
+    register: 'https://luma.com/aibuilderday2',
     sponsorPage: 'sponsors',
     contact: 'mailto:hello@justbuild.ing',
     justbuild: 'https://justbuild.ing',
